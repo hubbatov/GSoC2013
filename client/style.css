@@ -1,0 +1,58 @@
+/*===========================*/
+/*Basic classes styles*/
+body{
+    font: 11pt Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h1{
+    font-size: 36px;
+    margin: 0;
+    color: #fc6;
+}
+h2{
+    margin-top: 0;
+}
+/*===========================*/
+/*Main elements of page*/
+#messages{
+    background: white;
+    border: 1px solid #333;
+    margin: 20px;
+    height: 300px;
+    border-radius: 15px;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+#messagesField{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: -5px;
+    margin-bottom: -10px;
+    background: white;
+    max-height: 285px;
+    min-height: 285px;
+    min-width: 99%;
+    max-width: 99%;
+    border: none;
+    z-index: 3;
+}
+
+#footer{ 
+    padding: 10px; 
+    color: #fff; 
+    clear: left; 
+    text-align: right;
+    border-radius: 5px;
+    margin: 20px;
+}
+#browserButton{
+    float: right;
+}
+#header{ 
+    font: 200% serif;
+    padding: 10px;
+    height: 60px;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+}
