@@ -216,26 +216,29 @@ selector: "collectionAsString:",
 fn: function (aCollection){
 var self=this;
 var json;
-return smalltalk.withContext(function($ctx1) { var $1,$2;
-json="[ ";
-_st(aCollection)._do_((function(each){
-return smalltalk.withContext(function($ctx2) {json=_st(_st(_st(json).__comma("{ ")).__comma(_st(self)._concreteObjectAsString_(each))).__comma("},");
-return json;
-}, function($ctx2) {$ctx2.fillBlock({each:each},$ctx1)})}));
-$1=_st(_st(aCollection)._size()).__gt((0));
-if(smalltalk.assert($1)){
-json=_st(json).__comma("#");
-json;
-json=_st(json)._replace_with_(",#"," ]");
-json;
+return smalltalk.withContext(function($ctx1) { var $7,$9,$8,$6,$5,$4,$3,$2,$1,$10;
+json="";
+_st(aCollection)._withIndexDo_((function(each,index){
+return smalltalk.withContext(function($ctx2) {$7=json;
+$9=_st(index).__eq_eq((1));
+if(smalltalk.assert($9)){
+$8=" ";
 } else {
-json=_st(json).__comma(" ]");
-json;
+$8=" , ";
 };
-$2=json;
-return $2;
+$6=_st($7).__comma($8);
+$5=_st($6).__comma("\x22");
+$4=_st($5).__comma(_st(index)._printString());
+$3=_st($4).__comma("\x22 : ");
+$2=_st($3).__comma("{ ");
+$1=_st($2).__comma(_st(self)._concreteObjectAsString_(each));
+json=_st($1).__comma("}");
+return json;
+}, function($ctx2) {$ctx2.fillBlock({each:each,index:index},$ctx1)})}));
+$10=json;
+return $10;
 }, function($ctx1) {$ctx1.fill(self,"collectionAsString:",{aCollection:aCollection,json:json},smalltalk.AmberSessionObjects.klass)})},
-messageSends: ["do:", ",", "concreteObjectAsString:", "ifTrue:ifFalse:", "replace:with:", ">", "size"]}),
+messageSends: ["withIndexDo:", ",", "concreteObjectAsString:", "printString", "ifFalse:ifTrue:", "=="]}),
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
@@ -269,17 +272,17 @@ return json;
 }, function($ctx2) {$ctx2.fillBlock({each:each},$ctx1)})}));
 $1=_st(_st(_st(anObject)._class())._asString()).__eq("Dictionary");
 if(smalltalk.assert($1)){
-json=_st(_st(json).__comma(", \x22content\x22: ")).__comma(_st(self)._collectionAsString_(anObject));
+json=_st(_st(json).__comma(", ")).__comma(_st(self)._collectionAsString_(anObject));
 json;
 };
 $2=_st(_st(_st(anObject)._class())._asString()).__eq("Array");
 if(smalltalk.assert($2)){
-json=_st(_st(json).__comma(", \x22content\x22: ")).__comma(_st(self)._collectionAsString_(anObject));
+json=_st(_st(json).__comma(", ")).__comma(_st(self)._collectionAsString_(anObject));
 json;
 };
 $3=_st(_st(_st(anObject)._class())._asString()).__eq("String");
 if(smalltalk.assert($3)){
-json=_st(_st(json).__comma(", \x22content\x22: ")).__comma(_st(self)._collectionAsString_(anObject));
+json=_st(_st(json).__comma(", ")).__comma(_st(self)._collectionAsString_(anObject));
 json;
 };
 json=_st(json).__comma("}");
