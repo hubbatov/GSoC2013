@@ -117,6 +117,7 @@ appendObject: anObject
 
 objectAt: aHash
 	"Returns object with id = aHash, otherwise returns nill"
+	"abc"
 	^self at: ( aHash asString ) ifPresent: [ self at: ( aHash asString) ] ifAbsent: [ nil ]
 ! !
 
