@@ -2,6 +2,7 @@ smalltalk.addPackage('AmberRemoteDeveloping');
 smalltalk.addClass('AmberRemoteConnector', smalltalk.Object, ['socket'], 'AmberRemoteDeveloping');
 smalltalk.AmberRemoteConnector.comment="This class represents connection made with WebSocket technology."
 smalltalk.addMethod(
+"_createSocket_",
 smalltalk.method({
 selector: "createSocket:",
 category: 'not yet classified',
@@ -25,6 +26,7 @@ referencedClasses: ["NativeFunction"]
 smalltalk.AmberRemoteConnector);
 
 smalltalk.addMethod(
+"_socket",
 smalltalk.method({
 selector: "socket",
 category: 'not yet classified',
@@ -46,6 +48,7 @@ smalltalk.AmberRemoteConnector);
 smalltalk.addClass('AmberRemoteDevelopingClient', smalltalk.Object, ['client'], 'AmberRemoteDeveloping');
 smalltalk.AmberRemoteDevelopingClient.comment="This class represents an Amber client, that allows user to work with amber using Pharo IDE with workspace and inspector. (Class browser and debugger in future)"
 smalltalk.addMethod(
+"_answerWithObject_",
 smalltalk.method({
 selector: "answerWithObject:",
 category: 'connection',
@@ -69,6 +72,7 @@ referencedClasses: ["AmberSessionObjects"]
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
+"_createDefaultConnection",
 smalltalk.method({
 selector: "createDefaultConnection",
 category: 'connection',
@@ -86,6 +90,7 @@ referencedClasses: ["AmberRemoteConnector"]
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
+"_evaluateString_",
 smalltalk.method({
 selector: "evaluateString:",
 category: 'evaluating',
@@ -106,6 +111,7 @@ referencedClasses: ["Compiler", "AmberSessionObjects"]
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
+"_inspectObject_",
 smalltalk.method({
 selector: "inspectObject:",
 category: 'inspecting',
@@ -121,6 +127,7 @@ referencedClasses: []
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
+"_printObject_",
 smalltalk.method({
 selector: "printObject:",
 category: 'printing',
@@ -136,6 +143,7 @@ referencedClasses: []
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
+"_processMessage_",
 smalltalk.method({
 selector: "processMessage:",
 category: 'connection',
@@ -168,6 +176,7 @@ referencedClasses: []
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
+"_sendReply_withString_",
 smalltalk.method({
 selector: "sendReply:withString:",
 category: 'connection',
@@ -189,6 +198,7 @@ referencedClasses: []
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
+"_showMessage_",
 smalltalk.method({
 selector: "showMessage:",
 category: 'printing',
@@ -216,6 +226,7 @@ smalltalk.AmberRemoteDevelopingClient);
 smalltalk.addClass('AmberSessionObjects', smalltalk.Dictionary, [], 'AmberRemoteDeveloping');
 smalltalk.AmberSessionObjects.comment="This dictionary represents map (Unique id --> anObject)\x0aUsing this dictionary Pharo can take object by id using AmberObjectMirror on Pharo side"
 smalltalk.addMethod(
+"_appendObject_",
 smalltalk.method({
 selector: "appendObject:",
 category: 'accessors',
@@ -237,19 +248,17 @@ referencedClasses: ["Transcript"]
 smalltalk.AmberSessionObjects);
 
 smalltalk.addMethod(
+"_objectAt_",
 smalltalk.method({
 selector: "objectAt:",
 category: 'accessors',
 fn: function (aHash){
 var self=this;
-return smalltalk.withContext(function($ctx1) { 
-var $1;
+return smalltalk.withContext(function($ctx1) { var $1;
 $1=_st(self)._at_ifPresent_ifAbsent_(_st(aHash)._asString(),(function(){
-return smalltalk.withContext(function($ctx2) {
-return _st(self)._at_(_st(aHash)._asString());
+return smalltalk.withContext(function($ctx2) {return _st(self)._at_(_st(aHash)._asString());
 }, function($ctx2) {$ctx2.fillBlock({},$ctx1)})}),(function(){
-return smalltalk.withContext(function($ctx2) {
-return nil;
+return smalltalk.withContext(function($ctx2) {return nil;
 }, function($ctx2) {$ctx2.fillBlock({},$ctx1)})}));
 return $1;
 }, function($ctx1) {$ctx1.fill(self,"objectAt:",{aHash:aHash},smalltalk.AmberSessionObjects)})},
@@ -263,6 +272,7 @@ smalltalk.AmberSessionObjects);
 
 smalltalk.AmberSessionObjects.klass.iVarNames = ['session'];
 smalltalk.addMethod(
+"_collectionAsString_",
 smalltalk.method({
 selector: "collectionAsString:",
 category: 'converting',
@@ -288,6 +298,7 @@ referencedClasses: []
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
+"_concreteObjectAsString_",
 smalltalk.method({
 selector: "concreteObjectAsString:",
 category: 'converting',
@@ -306,6 +317,7 @@ referencedClasses: []
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
+"_objectAsString_",
 smalltalk.method({
 selector: "objectAsString:",
 category: 'converting',
@@ -347,6 +359,7 @@ referencedClasses: []
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
+"_session",
 smalltalk.method({
 selector: "session",
 category: 'converting',
