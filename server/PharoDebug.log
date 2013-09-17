@@ -38336,3 +38336,3408 @@ PasteUpMorph>>doOneCycle
 
 
 
+THERE_BE_DRAGONS_HERE
+
+PrimitiveFailed: primitive #primSocketSendDone: in a Socket[invalidSocketHandle] failed
+
+17 September 2013 3:58:29 pm
+
+
+
+VM: Win32 - IX86 - 6.2 - Croquet Closure Cog VM [CoInterpreter VMMaker-oscog-EstebanLorenzano.161]
+
+Image: Pharo1.3 [Latest update: #13315]
+
+
+
+Socket(Object)>>primitiveFailed:
+
+	Receiver: a Socket[invalidSocketHandle]
+
+	Arguments and temporary variables: 
+
+		selector: 	#primSocketSendDone:
+
+	Receiver's instance variables: 
+
+		semaphore: 	a Semaphore()
+
+		socketHandle: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+
+		writeSemaphore: 	a Semaphore()
+
+
+
+
+
+Socket(Object)>>primitiveFailed
+
+	Receiver: a Socket[invalidSocketHandle]
+
+	Arguments and temporary variables: 
+
+
+
+	Receiver's instance variables: 
+
+		semaphore: 	a Semaphore()
+
+		socketHandle: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+
+		writeSemaphore: 	a Semaphore()
+
+
+
+
+
+Socket>>primSocketSendDone:
+
+	Receiver: a Socket[invalidSocketHandle]
+
+	Arguments and temporary variables: 
+
+		socketID: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+	Receiver's instance variables: 
+
+		semaphore: 	a Semaphore()
+
+		socketHandle: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+
+		writeSemaphore: 	a Semaphore()
+
+
+
+
+
+Socket>>waitForSendDoneFor:
+
+	Receiver: a Socket[invalidSocketHandle]
+
+	Arguments and temporary variables: 
+
+		timeout: 	45
+		startTime: 	7864
+		msecsDelta: 	45000
+		msecsEllapsed: 	nil
+		sendDone: 	nil
+
+	Receiver's instance variables: 
+
+		semaphore: 	a Semaphore()
+
+		socketHandle: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+
+		writeSemaphore: 	a Semaphore()
+
+
+
+
+
+Socket>>sendSomeData:startIndex:count:for:
+
+	Receiver: a Socket[invalidSocketHandle]
+
+	Arguments and temporary variables: 
+
+		aStringOrByteArray: 	'inspectIt#Compiler newProtocol Handshake
+
+Upgrade: WebSo...etc...
+		startIndex: 	1
+		count: 	24
+		aTimeoutInSeconds: 	45
+		bytesSent: 	nil
+
+	Receiver's instance variables: 
+
+		semaphore: 	a Semaphore()
+
+		socketHandle: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+
+		writeSemaphore: 	a Semaphore()
+
+
+
+
+
+Socket>>sendSomeData:startIndex:count:
+
+	Receiver: a Socket[invalidSocketHandle]
+
+	Arguments and temporary variables: 
+
+		aStringOrByteArray: 	'inspectIt#Compiler newProtocol Handshake
+
+Upgrade: WebSo...etc...
+		startIndex: 	1
+		count: 	24
+
+	Receiver's instance variables: 
+
+		semaphore: 	a Semaphore()
+
+		socketHandle: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+
+		writeSemaphore: 	a Semaphore()
+
+
+
+
+
+Socket>>sendData:count:
+
+	Receiver: a Socket[invalidSocketHandle]
+
+	Arguments and temporary variables: 
+
+		buffer: 	'inspectIt#Compiler newProtocol Handshake
+
+Upgrade: WebSocket
+
+Connec...etc...
+		n: 	24
+		sent: 	0
+
+	Receiver's instance variables: 
+
+		semaphore: 	a Semaphore()
+
+		socketHandle: 	#[198 41 71 0 0 0 0 0 192 54 108 0]
+
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+
+		writeSemaphore: 	a Semaphore()
+
+
+
+
+
+[socket sendData: outBuffer count: outNextToWrite - 1] in SocketStream>>flush
+
+	Receiver: SocketStream[inbuf:4kb/outbuf:4kb]
+
+	Arguments and temporary variables: 
+
+
+
+	Receiver's instance variables: 
+
+		recentlyRead: 	432
+
+		socket: 	a Socket[invalidSocketHandle]
+
+		inBuffer: 	'GET /broadcast HTTP/1.1
+
+Upgrade: websocket
+
+Connection: Upgrade
+
+Ho...etc...
+
+		outBuffer: 	'inspectIt#Compiler newProtocol Handshake
+
+Upgrade: WebSocket
+
+Con...etc...
+
+		inNextToWrite: 	895
+
+		outNextToWrite: 	25
+
+		lastRead: 	894
+
+		timeout: 	3000
+
+		autoFlush: 	true
+
+		bufferSize: 	4096
+
+		binary: 	false
+
+		shouldSignal: 	true
+
+
+
+
+
+BlockClosure>>on:do:
+
+	Receiver: [socket sendData: outBuffer count: outNextToWrite - 1]
+
+	Arguments and temporary variables: 
+
+		exception: 	ConnectionTimedOut
+		handlerAction: 	[:ex | shouldSignal
+		ifTrue: []]
+		handlerActive: 	true
+
+	Receiver's instance variables: 
+
+		outerContext: 	SocketStream>>flush
+
+		startpc: 	60
+
+		numArgs: 	0
+
+
+
+
+
+SocketStream>>flush
+
+	Receiver: SocketStream[inbuf:4kb/outbuf:4kb]
+
+	Arguments and temporary variables: 
+
+
+
+	Receiver's instance variables: 
+
+		recentlyRead: 	432
+
+		socket: 	a Socket[invalidSocketHandle]
+
+		inBuffer: 	'GET /broadcast HTTP/1.1
+
+Upgrade: websocket
+
+Connection: Upgrade
+
+Ho...etc...
+
+		outBuffer: 	'inspectIt#Compiler newProtocol Handshake
+
+Upgrade: WebSocket
+
+Con...etc...
+
+		inNextToWrite: 	895
+
+		outNextToWrite: 	25
+
+		lastRead: 	894
+
+		timeout: 	3000
+
+		autoFlush: 	true
+
+		bufferSize: 	4096
+
+		binary: 	false
+
+		shouldSignal: 	true
+
+
+
+
+
+WebSocket07>>send:code:final:mask:
+
+	Receiver: WebSocket07(127.0.0.1:52805)
+
+	Arguments and temporary variables: 
+
+		data: 	'inspectIt#Compiler new'
+		opcode: 	1
+		isFinal: 	true
+		doMask: 	false
+		byte1: 	129
+		byte2: 	22
+		mask: 	nil
+		xLength: 	#[]
+		copy: 	'inspectIt#Compiler new'
+		i: 	nil
+
+	Receiver's instance variables: 
+
+		name: 	'127.0.0.1:52805'
+
+		process: 	nil
+
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+
+		frameType: 	nil
+
+		frameData: 	nil
+
+		closing: 	false
+
+		masking: 	false
+
+
+
+
+
+WebSocket07>>send:code:final:
+
+	Receiver: WebSocket07(127.0.0.1:52805)
+
+	Arguments and temporary variables: 
+
+		data: 	'inspectIt#Compiler new'
+		opcode: 	1
+		isFinal: 	true
+
+	Receiver's instance variables: 
+
+		name: 	'127.0.0.1:52805'
+
+		process: 	nil
+
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+
+		frameType: 	nil
+
+		frameData: 	nil
+
+		closing: 	false
+
+		masking: 	false
+
+
+
+
+
+WebSocket07>>send:code:
+
+	Receiver: WebSocket07(127.0.0.1:52805)
+
+	Arguments and temporary variables: 
+
+		data: 	'inspectIt#Compiler new'
+		opcode: 	1
+
+	Receiver's instance variables: 
+
+		name: 	'127.0.0.1:52805'
+
+		process: 	nil
+
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+
+		frameType: 	nil
+
+		frameData: 	nil
+
+		closing: 	false
+
+		masking: 	false
+
+
+
+
+
+WebSocket07>>send:
+
+	Receiver: WebSocket07(127.0.0.1:52805)
+
+	Arguments and temporary variables: 
+
+		aStringOrBytes: 	'inspectIt#Compiler new'
+
+	Receiver's instance variables: 
+
+		name: 	'127.0.0.1:52805'
+
+		process: 	nil
+
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+
+		frameType: 	nil
+
+		frameData: 	nil
+
+		closing: 	false
+
+		masking: 	false
+
+
+
+
+
+ToolAmberWorkspace>>inspectIt
+
+	Receiver: a ToolAmberWorkspace
+
+	Arguments and temporary variables: 
+
+		socket: 	WebSocket07(127.0.0.1:52805)
+
+	Receiver's instance variables: 
+
+		dependents: 	a DependentsArray(a SystemWindow(328466432) a PluggableTextMorph(10...etc...
+
+		contents: 	a Text for 'Compiler new'
+
+		bindings: 	nil
+
+		acceptDroppedMorphs: 	false
+
+		acceptAction: 	nil
+
+		mustDeclareVariables: 	false
+
+		fileName: 	nil
+
+		lineEnding: 	#crlf
+
+		encoding: 	'utf-8'
+
+		stylingActive: 	true
+
+		client: 	an ObjectAmberClient
+
+
+
+
+
+ToolAmberWorkspace(StringHolder)>>perform:orSendTo:
+
+	Receiver: a ToolAmberWorkspace
+
+	Arguments and temporary variables: 
+
+		selector: 	#inspectIt
+		otherTarget: 	a PluggableTextMorph(1006108672)
+
+	Receiver's instance variables: 
+
+		dependents: 	a DependentsArray(a SystemWindow(328466432) a PluggableTextMorph(10...etc...
+
+		contents: 	a Text for 'Compiler new'
+
+		bindings: 	nil
+
+		acceptDroppedMorphs: 	false
+
+		acceptAction: 	nil
+
+		mustDeclareVariables: 	false
+
+		fileName: 	nil
+
+		lineEnding: 	#crlf
+
+		encoding: 	'utf-8'
+
+		stylingActive: 	true
+
+		client: 	an ObjectAmberClient
+
+
+
+
+
+[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector]
+		ifFalse: [selArgCount = arguments size
+				ifTrue: [target perform: selector withArguments: arguments]
+				ifFalse: [target
+						perform: selector
+						withArguments: (arguments copyWith: evt)]].
+	self changed] in ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+	Receiver: a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Arguments and temporary variables: 
+
+		evt: 	[242@136 mouseUp 4932906 nil]
+		selArgCount: 	2
+
+	Receiver's instance variables: 
+
+		bounds: 	198@132 corner: 308@146
+
+		owner: 	a MenuMorph(545521664)
+
+		submorphs: 	#()
+
+		fullBounds: 	198@132 corner: 308@146
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (689700864)
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect it on...'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	a ToolAmberWorkspace
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+
+		icon: 	Form(16x1x8)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+BlockClosure>>ensure:
+
+	Receiver: [| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector...etc...
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[oldcursor show]
+		complete: 	nil
+		returnValue: 	nil
+
+	Receiver's instance variables: 
+
+		outerContext: 	ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+		startpc: 	156
+
+		numArgs: 	0
+
+
+
+
+
+CursorWithMask(Cursor)>>showWhile:
+
+	Receiver: ((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r10000000000000000000000...etc...
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [targe...etc...
+		oldcursor: 	((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r1...etc...
+
+	Receiver's instance variables: 
+
+		bits: 	a Bitmap of length 16
+
+		width: 	16
+
+		height: 	16
+
+		depth: 	1
+
+		offset: 	-1@ -1
+
+		maskForm: 	Form(16x16x1)
+
+
+
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+	Receiver: a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Arguments and temporary variables: 
+
+		evt: 	[242@136 mouseUp 4932906 nil]
+		w: 	a PasteUpMorph(425197568) [world]
+
+	Receiver's instance variables: 
+
+		bounds: 	198@132 corner: 308@146
+
+		owner: 	a MenuMorph(545521664)
+
+		submorphs: 	#()
+
+		fullBounds: 	198@132 corner: 308@146
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (689700864)
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect it on...'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	a ToolAmberWorkspace
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+
+		icon: 	Form(16x1x8)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>mouseUp:
+
+	Receiver: a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Arguments and temporary variables: 
+
+		evt: 	[242@136 mouseUp 4932906 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	198@132 corner: 308@146
+
+		owner: 	a MenuMorph(545521664)
+
+		submorphs: 	#()
+
+		fullBounds: 	198@132 corner: 308@146
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (689700864)
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect it on...'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	a ToolAmberWorkspace
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+
+		icon: 	Form(16x1x8)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>handleMouseUp:
+
+	Receiver: a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	198@132 corner: 308@146
+
+		owner: 	a MenuMorph(545521664)
+
+		submorphs: 	#()
+
+		fullBounds: 	198@132 corner: 308@146
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (689700864)
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect it on...'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	a ToolAmberWorkspace
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+
+		icon: 	Form(16x1x8)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+MouseButtonEvent>>sentTo:
+
+	Receiver: [242@136 mouseUp 4932906 nil]
+
+	Arguments and temporary variables: 
+
+		anObject: 	a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Receiver's instance variables: 
+
+		timeStamp: 	4932906
+
+		source: 	a HandMorph(843055104)
+
+		windowIndex: 	nil
+
+		type: 	#mouseUp
+
+		buttons: 	0
+
+		position: 	242@136
+
+		handler: 	nil
+
+		wasHandled: 	true
+
+		whichButton: 	4
+
+
+
+
+
+ToggleMenuItemMorph(Morph)>>handleEvent:
+
+	Receiver: a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	198@132 corner: 308@146
+
+		owner: 	a MenuMorph(545521664)
+
+		submorphs: 	#()
+
+		fullBounds: 	198@132 corner: 308@146
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (689700864)
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect it on...'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	a ToolAmberWorkspace
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+
+		icon: 	Form(16x1x8)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		aMorph: 	a ToggleMenuItemMorph(679477248)'Inspect it on...'
+		localEvt: 	nil
+		index: 	1
+		child: 	nil
+		morphs: 	#()
+		inside: 	true
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		aMorph: 	a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+ToggleMenuItemMorph(Morph)>>processEvent:using:
+
+	Receiver: a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		defaultDispatcher: 	a MorphicEventDispatcher
+
+	Receiver's instance variables: 
+
+		bounds: 	198@132 corner: 308@146
+
+		owner: 	a MenuMorph(545521664)
+
+		submorphs: 	#()
+
+		fullBounds: 	198@132 corner: 308@146
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (689700864)
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect it on...'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	a ToolAmberWorkspace
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+
+		icon: 	Form(16x1x8)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		aMorph: 	a MenuMorph(545521664)
+		localEvt: 	[242@136 mouseUp 4932906 nil]
+		index: 	3
+		child: 	a ToggleMenuItemMorph(679477248)'Inspect it on...'
+		morphs: 	an Array(a ToggleMenuItemMorph(516685824)'Do it on...' a ToggleMenuItem...etc...
+		inside: 	false
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		aMorph: 	a MenuMorph(545521664)
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+MenuMorph(Morph)>>processEvent:using:
+
+	Receiver: a MenuMorph(545521664)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		defaultDispatcher: 	a MorphicEventDispatcher
+
+	Receiver's instance variables: 
+
+		bounds: 	193@89 corner: 313@267
+
+		owner: 	nil
+
+		submorphs: 	an Array(a ToggleMenuItemMorph(516685824)'Do it on...' a ToggleMenuI...etc...
+
+		fullBounds: 	193@89 corner: 313@267
+
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+
+		extension: 	a MorphExtension (560463872) [other:  (basicColor -> (Color r: 0.745...etc...
+
+		borderWidth: 	2
+
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+
+		defaultTarget: 	a ToolAmberWorkspace
+
+		selectedItem: 	a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+		stayUp: 	false
+
+		popUpOwner: 	nil
+
+		activeSubMenu: 	nil
+
+		activatorDockingBar: 	nil
+
+		embeddable: 	nil
+
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(516685824)'Do it on...' a...etc...
+
+
+
+
+
+MenuMorph(Morph)>>processEvent:
+
+	Receiver: a MenuMorph(545521664)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	193@89 corner: 313@267
+
+		owner: 	nil
+
+		submorphs: 	an Array(a ToggleMenuItemMorph(516685824)'Do it on...' a ToggleMenuI...etc...
+
+		fullBounds: 	193@89 corner: 313@267
+
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+
+		extension: 	a MorphExtension (560463872) [other:  (basicColor -> (Color r: 0.745...etc...
+
+		borderWidth: 	2
+
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+
+		defaultTarget: 	a ToolAmberWorkspace
+
+		selectedItem: 	a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+		stayUp: 	false
+
+		popUpOwner: 	nil
+
+		activeSubMenu: 	nil
+
+		activatorDockingBar: 	nil
+
+		embeddable: 	nil
+
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(516685824)'Do it on...' a...etc...
+
+
+
+
+
+MenuMorph>>handleFocusEvent:
+
+	Receiver: a MenuMorph(545521664)
+
+	Arguments and temporary variables: 
+
+		evt: 	[242@136 mouseUp 4932906 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	193@89 corner: 313@267
+
+		owner: 	nil
+
+		submorphs: 	an Array(a ToggleMenuItemMorph(516685824)'Do it on...' a ToggleMenuI...etc...
+
+		fullBounds: 	193@89 corner: 313@267
+
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+
+		extension: 	a MorphExtension (560463872) [other:  (basicColor -> (Color r: 0.745...etc...
+
+		borderWidth: 	2
+
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+
+		defaultTarget: 	a ToolAmberWorkspace
+
+		selectedItem: 	a ToggleMenuItemMorph(679477248)'Inspect it on...'
+
+		stayUp: 	false
+
+		popUpOwner: 	nil
+
+		activeSubMenu: 	nil
+
+		activatorDockingBar: 	nil
+
+		embeddable: 	nil
+
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(516685824)'Do it on...' a...etc...
+
+
+
+
+
+[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+				handleFocusEvent: (anEvent
+						transformedBy: (focusHolder transformedFrom: self))] in HandMorph>>sendFocusEvent:to:clear:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		focusHolder: 	a MenuMorph(545521664)
+		result: 	#(nil)
+
+	Receiver's instance variables: 
+
+		bounds: 	242@136 corner: 258@152
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	242@136 corner: 258@152
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(223870976)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[242@136 mouseUp 4932906 nil]
+
+		targetOffset: 	44@4
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 4932906 242 136 0 0 1 1)
+
+		lastKeyScanCode: 	1
+
+		combinedChar: 	nil
+
+
+
+
+
+[aBlock value] in PasteUpMorph>>becomeActiveDuring:
+
+	Receiver: a PasteUpMorph(425197568) [world]
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+		...etc...
+
+	Receiver's instance variables: 
+
+		bounds: 	0@0 corner: 1280@689
+
+		owner: 	nil
+
+		submorphs: 	an Array(a TaskbarMorph(984088576) a PreDebugWindow(600309760) a Sys...etc...
+
+		fullBounds: 	nil
+
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+
+		extension: 	a MorphExtension (666632192) [eventHandler = an EventHandler]  [othe...etc...
+
+		borderWidth: 	0
+
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+
+		backgroundMorph: 	nil
+
+		worldState: 	a WorldState
+
+		griddingOn: 	nil
+
+
+
+
+
+BlockClosure>>on:do:
+
+	Receiver: [aBlock value]
+
+	Arguments and temporary variables: 
+
+		exception: 	Error
+		handlerAction: 	[:ex | 
+ActiveWorld := priorWorld.
+	ActiveEvent := priorEvent.
+	...etc...
+		handlerActive: 	false
+
+	Receiver's instance variables: 
+
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+
+		startpc: 	67
+
+		numArgs: 	0
+
+
+
+
+
+PasteUpMorph>>becomeActiveDuring:
+
+	Receiver: a PasteUpMorph(425197568) [world]
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+		...etc...
+		priorWorld: 	a PasteUpMorph(425197568) [world]
+		priorHand: 	a HandMorph(843055104)
+		priorEvent: 	[242@136 mouseOver red nil nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	0@0 corner: 1280@689
+
+		owner: 	nil
+
+		submorphs: 	an Array(a TaskbarMorph(984088576) a PreDebugWindow(600309760) a Sys...etc...
+
+		fullBounds: 	nil
+
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+
+		extension: 	a MorphExtension (666632192) [eventHandler = an EventHandler]  [othe...etc...
+
+		borderWidth: 	0
+
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+
+		backgroundMorph: 	nil
+
+		worldState: 	a WorldState
+
+		griddingOn: 	nil
+
+
+
+
+
+HandMorph>>sendFocusEvent:to:clear:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		focusHolder: 	a MenuMorph(545521664)
+		aBlock: 	[self mouseFocus: nil]
+		w: 	a PasteUpMorph(425197568) [world]
+		result: 	#(nil)
+
+	Receiver's instance variables: 
+
+		bounds: 	242@136 corner: 258@152
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	242@136 corner: 258@152
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(223870976)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[242@136 mouseUp 4932906 nil]
+
+		targetOffset: 	44@4
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 4932906 242 136 0 0 1 1)
+
+		lastKeyScanCode: 	1
+
+		combinedChar: 	nil
+
+
+
+
+
+HandMorph>>sendEvent:focus:clear:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+		focusHolder: 	a MenuMorph(545521664)
+		aBlock: 	[self mouseFocus: nil]
+		result: 	nil
+
+	Receiver's instance variables: 
+
+		bounds: 	242@136 corner: 258@152
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	242@136 corner: 258@152
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(223870976)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[242@136 mouseUp 4932906 nil]
+
+		targetOffset: 	44@4
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 4932906 242 136 0 0 1 1)
+
+		lastKeyScanCode: 	1
+
+		combinedChar: 	nil
+
+
+
+
+
+HandMorph>>sendMouseEvent:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[242@136 mouseUp 4932906 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	242@136 corner: 258@152
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	242@136 corner: 258@152
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(223870976)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[242@136 mouseUp 4932906 nil]
+
+		targetOffset: 	44@4
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 4932906 242 136 0 0 1 1)
+
+		lastKeyScanCode: 	1
+
+		combinedChar: 	nil
+
+
+
+
+
+
+
+--- The full stack ---
+
+Socket(Object)>>primitiveFailed:
+
+Socket(Object)>>primitiveFailed
+
+Socket>>primSocketSendDone:
+
+Socket>>waitForSendDoneFor:
+
+Socket>>sendSomeData:startIndex:count:for:
+
+Socket>>sendSomeData:startIndex:count:
+
+Socket>>sendData:count:
+
+[socket sendData: outBuffer count: outNextToWrite - 1] in SocketStream>>flush
+
+BlockClosure>>on:do:
+
+SocketStream>>flush
+
+WebSocket07>>send:code:final:mask:
+
+WebSocket07>>send:code:final:
+
+WebSocket07>>send:code:
+
+WebSocket07>>send:
+
+ToolAmberWorkspace>>inspectIt
+
+ToolAmberWorkspace(StringHolder)>>perform:orSendTo:
+
+[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector]
+		ifFalse: [selArgCount = arguments size
+				ifTrue: [target perform: selector withArguments: arguments]
+				ifFalse: [target
+						perform: selector
+						withArguments: (arguments copyWith: evt)]].
+	self changed] in ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+BlockClosure>>ensure:
+
+CursorWithMask(Cursor)>>showWhile:
+
+ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+ToggleMenuItemMorph(MenuItemMorph)>>mouseUp:
+
+ToggleMenuItemMorph(MenuItemMorph)>>handleMouseUp:
+
+MouseButtonEvent>>sentTo:
+
+ToggleMenuItemMorph(Morph)>>handleEvent:
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+ToggleMenuItemMorph(Morph)>>processEvent:using:
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+MenuMorph(Morph)>>processEvent:using:
+
+MenuMorph(Morph)>>processEvent:
+
+MenuMorph>>handleFocusEvent:
+
+[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+				handleFocusEvent: (anEvent
+						transformedBy: (focusHolder transformedFrom: self))] in HandMorph>>sendFocusEvent:to:clear:
+
+[aBlock value] in PasteUpMorph>>becomeActiveDuring:
+
+BlockClosure>>on:do:
+
+PasteUpMorph>>becomeActiveDuring:
+
+HandMorph>>sendFocusEvent:to:clear:
+
+HandMorph>>sendEvent:focus:clear:
+
+HandMorph>>sendMouseEvent:
+
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+
+HandMorph>>handleEvent:
+
+HandMorph>>processEvents
+
+[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil] in WorldState>>doOneCycleNowFor:
+
+Array(SequenceableCollection)>>do:
+
+WorldState>>handsDo:
+
+WorldState>>doOneCycleNowFor:
+
+WorldState>>doOneCycleFor:
+
+WorldState>>doOneSubCycleFor:
+
+PasteUpMorph>>doOneSubCycle
+
+MenuMorph>>invokeModalAt:in:allowKeyboard:
+
+MenuMorph>>invokeModal:
+
+MenuMorph>>invokeModal
+
+PluggableTextMorph>>yellowButtonActivity:
+
+PluggableTextMorph(ScrollPane)>>mouseDown:
+
+PluggableTextMorph(Morph)>>handleMouseDown:
+
+MouseButtonEvent>>sentTo:
+
+PluggableTextMorph(Morph)>>handleEvent:
+
+MorphicEventDispatcher>>dispatchMouseDown:with:
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+PluggableTextMorph(Morph)>>processEvent:using:
+
+MorphicEventDispatcher>>dispatchMouseDown:with:
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+SystemWindow(Morph)>>processEvent:using:
+
+MorphicEventDispatcher>>dispatchMouseDown:with:
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+PasteUpMorph(Morph)>>processEvent:using:
+
+PasteUpMorph>>processEvent:using:
+
+PasteUpMorph(Morph)>>processEvent:
+
+HandMorph>>sendEvent:focus:clear:
+
+HandMorph>>sendMouseEvent:
+
+HandMorph>>handleEvent:
+
+HandMorph>>processEvents
+
+[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil] in WorldState>>doOneCycleNowFor:
+
+Array(SequenceableCollection)>>do:
+
+WorldState>>handsDo:
+
+WorldState>>doOneCycleNowFor:
+
+WorldState>>doOneCycleFor:
+
+PasteUpMorph>>doOneCycle
+
+[[World doOneCycle.
+	Processor yield.
+	false] whileFalse.
+	nil] in Project class>>spawnNewProcess
+
+[self value.
+	Processor terminateActive] in BlockClosure>>newProcess
+
+------------------------------------------------------------
+
+
+
+THERE_BE_DRAGONS_HERE
+
+MessageNotUnderstood: ByteString>>requestInspect
+
+17 September 2013 5:24 pm
+
+
+
+VM: Win32 - IX86 - 6.2 - Croquet Closure Cog VM [CoInterpreter VMMaker-oscog-EstebanLorenzano.161]
+
+Image: Pharo1.3 [Latest update: #13315]
+
+
+
+ByteString(Object)>>doesNotUnderstand: #requestInspect
+
+	Receiver: 'id: 	an AmberObjectMirror(nil)
+'
+
+	Arguments and temporary variables: 
+
+		aMessage: 	requestInspect
+		exception: 	MessageNotUnderstood: ByteString>>requestInspect
+		resumeValue: 	nil
+
+	Receiver's instance variables: 
+
+'id: 	an AmberObjectMirror(nil)
+'
+
+
+
+AmberObjectMirrorInspector>>inspectSelection
+
+	Receiver: an AmberObjectMirrorInspector
+
+	Arguments and temporary variables: 
+
+
+
+	Receiver's instance variables: 
+
+		contents: 	'id: 	an AmberObjectMirror(nil)
+'
+
+		object: 	an AmberObjectMirror(8)
+
+		selectionIndex: 	2
+
+		timeOfLastListUpdate: 	5132722
+
+		selectionUpdateTime: 	0
+
+
+
+
+
+AmberObjectMirrorInspector(Object)>>perform:orSendTo:
+
+	Receiver: an AmberObjectMirrorInspector
+
+	Arguments and temporary variables: 
+
+		selector: 	#inspectSelection
+		otherTarget: 	a PluggableListMorph(580386816)
+
+	Receiver's instance variables: 
+
+		contents: 	'id: 	an AmberObjectMirror(nil)
+'
+
+		object: 	an AmberObjectMirror(8)
+
+		selectionIndex: 	2
+
+		timeOfLastListUpdate: 	5132722
+
+		selectionUpdateTime: 	0
+
+
+
+
+
+[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector]
+		ifFalse: [selArgCount = arguments size
+				ifTrue: [target perform: selector withArguments: arguments]
+				ifFalse: [target
+						perform: selector
+						withArguments: (arguments copyWith: evt)]].
+	self changed] in ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+	Receiver: a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Arguments and temporary variables: 
+
+		evt: 	[256@310 mouseUp 10064250 nil]
+		selArgCount: 	2
+
+	Receiver's instance variables: 
+
+		bounds: 	242@300 corner: 472@318
+
+		owner: 	a MenuMorph(421789696)
+
+		submorphs: 	#()
+
+		fullBounds: 	242@300 corner: 472@318
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (844890112) [balloonText] 
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect (i)'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	an AmberObjectMirrorInspector
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectSelection a PluggableListMorph(580386816))
+
+		icon: 	Form(16x16x32)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+BlockClosure>>ensure:
+
+	Receiver: [| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector...etc...
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[oldcursor show]
+		complete: 	nil
+		returnValue: 	nil
+
+	Receiver's instance variables: 
+
+		outerContext: 	ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+		startpc: 	156
+
+		numArgs: 	0
+
+
+
+
+
+CursorWithMask(Cursor)>>showWhile:
+
+	Receiver: ((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r10000000000000000000000...etc...
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [targe...etc...
+		oldcursor: 	((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r1...etc...
+
+	Receiver's instance variables: 
+
+		bits: 	a Bitmap of length 16
+
+		width: 	16
+
+		height: 	16
+
+		depth: 	1
+
+		offset: 	-1@ -1
+
+		maskForm: 	Form(16x16x1)
+
+
+
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+	Receiver: a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Arguments and temporary variables: 
+
+		evt: 	[256@310 mouseUp 10064250 nil]
+		w: 	a PasteUpMorph(425197568) [world]
+
+	Receiver's instance variables: 
+
+		bounds: 	242@300 corner: 472@318
+
+		owner: 	a MenuMorph(421789696)
+
+		submorphs: 	#()
+
+		fullBounds: 	242@300 corner: 472@318
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (844890112) [balloonText] 
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect (i)'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	an AmberObjectMirrorInspector
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectSelection a PluggableListMorph(580386816))
+
+		icon: 	Form(16x16x32)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>mouseUp:
+
+	Receiver: a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Arguments and temporary variables: 
+
+		evt: 	[256@310 mouseUp 10064250 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	242@300 corner: 472@318
+
+		owner: 	a MenuMorph(421789696)
+
+		submorphs: 	#()
+
+		fullBounds: 	242@300 corner: 472@318
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (844890112) [balloonText] 
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect (i)'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	an AmberObjectMirrorInspector
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectSelection a PluggableListMorph(580386816))
+
+		icon: 	Form(16x16x32)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>handleMouseUp:
+
+	Receiver: a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	242@300 corner: 472@318
+
+		owner: 	a MenuMorph(421789696)
+
+		submorphs: 	#()
+
+		fullBounds: 	242@300 corner: 472@318
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (844890112) [balloonText] 
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect (i)'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	an AmberObjectMirrorInspector
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectSelection a PluggableListMorph(580386816))
+
+		icon: 	Form(16x16x32)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+MouseButtonEvent>>sentTo:
+
+	Receiver: [256@310 mouseUp 10064250 nil]
+
+	Arguments and temporary variables: 
+
+		anObject: 	a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Receiver's instance variables: 
+
+		timeStamp: 	10064250
+
+		source: 	a HandMorph(843055104)
+
+		windowIndex: 	nil
+
+		type: 	#mouseUp
+
+		buttons: 	0
+
+		position: 	256@310
+
+		handler: 	nil
+
+		wasHandled: 	true
+
+		whichButton: 	4
+
+
+
+
+
+ToggleMenuItemMorph(Morph)>>handleEvent:
+
+	Receiver: a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	242@300 corner: 472@318
+
+		owner: 	a MenuMorph(421789696)
+
+		submorphs: 	#()
+
+		fullBounds: 	242@300 corner: 472@318
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (844890112) [balloonText] 
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect (i)'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	an AmberObjectMirrorInspector
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectSelection a PluggableListMorph(580386816))
+
+		icon: 	Form(16x16x32)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		aMorph: 	a ToggleMenuItemMorph(834666496)'Inspect (i)'
+		localEvt: 	nil
+		index: 	1
+		child: 	nil
+		morphs: 	#()
+		inside: 	true
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		aMorph: 	a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+ToggleMenuItemMorph(Morph)>>processEvent:using:
+
+	Receiver: a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		defaultDispatcher: 	a MorphicEventDispatcher
+
+	Receiver's instance variables: 
+
+		bounds: 	242@300 corner: 472@318
+
+		owner: 	a MenuMorph(421789696)
+
+		submorphs: 	#()
+
+		fullBounds: 	242@300 corner: 472@318
+
+		color: 	Color black
+
+		extension: 	a MorphExtension (844890112) [balloonText] 
+
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+
+		emphasis: 	0
+
+		contents: 	'Inspect (i)'
+
+		hasFocus: 	false
+
+		isEnabled: 	true
+
+		subMenu: 	nil
+
+		isSelected: 	false
+
+		target: 	an AmberObjectMirrorInspector
+
+		selector: 	#perform:orSendTo:
+
+		arguments: 	an Array(#inspectSelection a PluggableListMorph(580386816))
+
+		icon: 	Form(16x16x32)
+
+		getStateSelector: 	nil
+
+		enablementSelector: 	nil
+
+		keyText: 	nil
+
+
+
+
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		aMorph: 	a MenuMorph(421789696)
+		localEvt: 	[256@310 mouseUp 10064250 nil]
+		index: 	1
+		child: 	a ToggleMenuItemMorph(834666496)'Inspect (i)'
+		morphs: 	an Array(a ToggleMenuItemMorph(834666496)'Inspect (i)' a ToggleMenuItem...etc...
+		inside: 	false
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+	Receiver: a MorphicEventDispatcher
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		aMorph: 	a MenuMorph(421789696)
+
+	Receiver's instance variables: 
+
+		lastType: 	#mouseUp
+
+		lastDispatch: 	#dispatchDefault:with:
+
+
+
+
+
+MenuMorph(Morph)>>processEvent:using:
+
+	Receiver: a MenuMorph(421789696)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		defaultDispatcher: 	a MorphicEventDispatcher
+
+	Receiver's instance variables: 
+
+		bounds: 	237@295 corner: 477@579
+
+		owner: 	nil
+
+		submorphs: 	an Array(a ToggleMenuItemMorph(834666496)'Inspect (i)' a ToggleMenuI...etc...
+
+		fullBounds: 	237@295 corner: 477@579
+
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+
+		extension: 	a MorphExtension (436731904) [other:  (basicColor -> (Color r: 0.745...etc...
+
+		borderWidth: 	2
+
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+
+		defaultTarget: 	an AmberObjectMirrorInspector
+
+		selectedItem: 	a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+		stayUp: 	false
+
+		popUpOwner: 	nil
+
+		activeSubMenu: 	nil
+
+		activatorDockingBar: 	nil
+
+		embeddable: 	nil
+
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(834666496)'Inspect (i)' a...etc...
+
+
+
+
+
+MenuMorph(Morph)>>processEvent:
+
+	Receiver: a MenuMorph(421789696)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	237@295 corner: 477@579
+
+		owner: 	nil
+
+		submorphs: 	an Array(a ToggleMenuItemMorph(834666496)'Inspect (i)' a ToggleMenuI...etc...
+
+		fullBounds: 	237@295 corner: 477@579
+
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+
+		extension: 	a MorphExtension (436731904) [other:  (basicColor -> (Color r: 0.745...etc...
+
+		borderWidth: 	2
+
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+
+		defaultTarget: 	an AmberObjectMirrorInspector
+
+		selectedItem: 	a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+		stayUp: 	false
+
+		popUpOwner: 	nil
+
+		activeSubMenu: 	nil
+
+		activatorDockingBar: 	nil
+
+		embeddable: 	nil
+
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(834666496)'Inspect (i)' a...etc...
+
+
+
+
+
+MenuMorph>>handleFocusEvent:
+
+	Receiver: a MenuMorph(421789696)
+
+	Arguments and temporary variables: 
+
+		evt: 	[256@310 mouseUp 10064250 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	237@295 corner: 477@579
+
+		owner: 	nil
+
+		submorphs: 	an Array(a ToggleMenuItemMorph(834666496)'Inspect (i)' a ToggleMenuI...etc...
+
+		fullBounds: 	237@295 corner: 477@579
+
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+
+		extension: 	a MorphExtension (436731904) [other:  (basicColor -> (Color r: 0.745...etc...
+
+		borderWidth: 	2
+
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+
+		defaultTarget: 	an AmberObjectMirrorInspector
+
+		selectedItem: 	a ToggleMenuItemMorph(834666496)'Inspect (i)'
+
+		stayUp: 	false
+
+		popUpOwner: 	nil
+
+		activeSubMenu: 	nil
+
+		activatorDockingBar: 	nil
+
+		embeddable: 	nil
+
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(834666496)'Inspect (i)' a...etc...
+
+
+
+
+
+[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+				handleFocusEvent: (anEvent
+						transformedBy: (focusHolder transformedFrom: self))] in HandMorph>>sendFocusEvent:to:clear:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		focusHolder: 	a MenuMorph(421789696)
+		result: 	#(nil)
+
+	Receiver's instance variables: 
+
+		bounds: 	256@310 corner: 272@326
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	256@310 corner: 272@326
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(288620544)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[256@310 256@310 mouseMove 10064046 nil]
+
+		targetOffset: 	14@10
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 10064046 256 310 0 0 0 1)
+
+		lastKeyScanCode: 	8
+
+		combinedChar: 	nil
+
+
+
+
+
+[aBlock value] in PasteUpMorph>>becomeActiveDuring:
+
+	Receiver: a PasteUpMorph(425197568) [world]
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+		...etc...
+
+	Receiver's instance variables: 
+
+		bounds: 	0@0 corner: 1280@689
+
+		owner: 	nil
+
+		submorphs: 	an Array(a TaskbarMorph(984088576) a PreDebugWindow(1049362432) a Sy...etc...
+
+		fullBounds: 	nil
+
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+
+		extension: 	a MorphExtension (666632192) [eventHandler = an EventHandler]  [othe...etc...
+
+		borderWidth: 	0
+
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+
+		backgroundMorph: 	nil
+
+		worldState: 	a WorldState
+
+		griddingOn: 	nil
+
+
+
+
+
+BlockClosure>>on:do:
+
+	Receiver: [aBlock value]
+
+	Arguments and temporary variables: 
+
+		exception: 	Error
+		handlerAction: 	[:ex | 
+ActiveWorld := priorWorld.
+	ActiveEvent := priorEvent.
+	...etc...
+		handlerActive: 	false
+
+	Receiver's instance variables: 
+
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+
+		startpc: 	67
+
+		numArgs: 	0
+
+
+
+
+
+PasteUpMorph>>becomeActiveDuring:
+
+	Receiver: a PasteUpMorph(425197568) [world]
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+		...etc...
+		priorWorld: 	a PasteUpMorph(425197568) [world]
+		priorHand: 	a HandMorph(843055104)
+		priorEvent: 	[256@310 mouseOver red nil nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	0@0 corner: 1280@689
+
+		owner: 	nil
+
+		submorphs: 	an Array(a TaskbarMorph(984088576) a PreDebugWindow(1049362432) a Sy...etc...
+
+		fullBounds: 	nil
+
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+
+		extension: 	a MorphExtension (666632192) [eventHandler = an EventHandler]  [othe...etc...
+
+		borderWidth: 	0
+
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+
+		backgroundMorph: 	nil
+
+		worldState: 	a WorldState
+
+		griddingOn: 	nil
+
+
+
+
+
+HandMorph>>sendFocusEvent:to:clear:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		focusHolder: 	a MenuMorph(421789696)
+		aBlock: 	[self mouseFocus: nil]
+		w: 	a PasteUpMorph(425197568) [world]
+		result: 	#(nil)
+
+	Receiver's instance variables: 
+
+		bounds: 	256@310 corner: 272@326
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	256@310 corner: 272@326
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(288620544)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[256@310 256@310 mouseMove 10064046 nil]
+
+		targetOffset: 	14@10
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 10064046 256 310 0 0 0 1)
+
+		lastKeyScanCode: 	8
+
+		combinedChar: 	nil
+
+
+
+
+
+HandMorph>>sendEvent:focus:clear:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		focusHolder: 	a MenuMorph(421789696)
+		aBlock: 	[self mouseFocus: nil]
+		result: 	nil
+
+	Receiver's instance variables: 
+
+		bounds: 	256@310 corner: 272@326
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	256@310 corner: 272@326
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(288620544)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[256@310 256@310 mouseMove 10064046 nil]
+
+		targetOffset: 	14@10
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 10064046 256 310 0 0 0 1)
+
+		lastKeyScanCode: 	8
+
+		combinedChar: 	nil
+
+
+
+
+
+HandMorph>>sendMouseEvent:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+
+	Receiver's instance variables: 
+
+		bounds: 	256@310 corner: 272@326
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	256@310 corner: 272@326
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(288620544)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[256@310 256@310 mouseMove 10064046 nil]
+
+		targetOffset: 	14@10
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 10064046 256 310 0 0 0 1)
+
+		lastKeyScanCode: 	8
+
+		combinedChar: 	nil
+
+
+
+
+
+HandMorph>>handleEvent:
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		anEvent: 	[256@310 mouseUp 10064250 nil]
+		evt: 	[256@310 mouseUp 10064250 nil]
+		ofs: 	nil
+
+	Receiver's instance variables: 
+
+		bounds: 	256@310 corner: 272@326
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	256@310 corner: 272@326
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(288620544)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[256@310 256@310 mouseMove 10064046 nil]
+
+		targetOffset: 	14@10
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 10064046 256 310 0 0 0 1)
+
+		lastKeyScanCode: 	8
+
+		combinedChar: 	nil
+
+
+
+
+
+HandMorph>>processEvents
+
+	Receiver: a HandMorph(843055104)
+
+	Arguments and temporary variables: 
+
+		evt: 	[256@310 mouseUp 10064250 nil]
+		evtBuf: 	#(1 10064250 256 310 0 0 1 1)
+		type: 	1
+		hadAny: 	false
+
+	Receiver's instance variables: 
+
+		bounds: 	256@310 corner: 272@326
+
+		owner: 	a PasteUpMorph(425197568) [world]
+
+		submorphs: 	#()
+
+		fullBounds: 	256@310 corner: 272@326
+
+		color: 	Color blue
+
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+
+		mouseFocus: 	nil
+
+		keyboardFocus: 	a PluggableButtonMorph(288620544)
+
+		eventListeners: 	nil
+
+		mouseListeners: 	nil
+
+		keyboardListeners: 	nil
+
+		mouseClickState: 	nil
+
+		mouseOverHandler: 	a MouseOverHandler
+
+		lastMouseEvent: 	[256@310 256@310 mouseMove 10064046 nil]
+
+		targetOffset: 	14@10
+
+		damageRecorder: 	a DamageRecorder
+
+		cacheCanvas: 	nil
+
+		cachedCanvasHasHoles: 	true
+
+		temporaryCursor: 	nil
+
+		temporaryCursorOffset: 	nil
+
+		hardwareCursor: 	nil
+
+		hasChanged: 	true
+
+		savedPatch: 	nil
+
+		userInitials: 	''
+
+		lastEventBuffer: 	#(1 10064046 256 310 0 0 0 1)
+
+		lastKeyScanCode: 	8
+
+		combinedChar: 	nil
+
+
+
+
+
+[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil] in WorldState>>doOneCycleNowFor:
+
+	Receiver: a WorldState
+
+	Arguments and temporary variables: 
+
+		h: 	a HandMorph(843055104)
+
+	Receiver's instance variables: 
+
+		hands: 	an Array(a HandMorph(843055104))
+
+		viewBox: 	0@0 corner: 1280@689
+
+		canvas: 	a FormCanvas on: DisplayScreen(1280x689x32)
+
+		damageRecorder: 	a DamageRecorder
+
+		stepList: 	a Heap(StepMessage(#stepAt: -> a PreDebugWindow(1049362432))(a PreDeb...etc...
+
+		lastStepTime: 	5139178
+
+		lastStepMessage: 	nil
+
+		lastCycleTime: 	5139218
+
+		alarms: 	a Heap()
+
+		lastAlarmTime: 	5139178
+
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+
+
+
+Array(SequenceableCollection)>>do:
+
+	Receiver: an Array(a HandMorph(843055104))
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil]
+		index: 	1
+		indexLimiT: 	1
+
+	Receiver's instance variables: 
+
+an Array(a HandMorph(843055104))
+
+
+
+WorldState>>handsDo:
+
+	Receiver: a WorldState
+
+	Arguments and temporary variables: 
+
+		aBlock: 	[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil]
+
+	Receiver's instance variables: 
+
+		hands: 	an Array(a HandMorph(843055104))
+
+		viewBox: 	0@0 corner: 1280@689
+
+		canvas: 	a FormCanvas on: DisplayScreen(1280x689x32)
+
+		damageRecorder: 	a DamageRecorder
+
+		stepList: 	a Heap(StepMessage(#stepAt: -> a PreDebugWindow(1049362432))(a PreDeb...etc...
+
+		lastStepTime: 	5139178
+
+		lastStepMessage: 	nil
+
+		lastCycleTime: 	5139218
+
+		alarms: 	a Heap()
+
+		lastAlarmTime: 	5139178
+
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+
+
+
+WorldState>>doOneCycleNowFor:
+
+	Receiver: a WorldState
+
+	Arguments and temporary variables: 
+
+		aWorld: 	a PasteUpMorph(425197568) [world]
+
+	Receiver's instance variables: 
+
+		hands: 	an Array(a HandMorph(843055104))
+
+		viewBox: 	0@0 corner: 1280@689
+
+		canvas: 	a FormCanvas on: DisplayScreen(1280x689x32)
+
+		damageRecorder: 	a DamageRecorder
+
+		stepList: 	a Heap(StepMessage(#stepAt: -> a PreDebugWindow(1049362432))(a PreDeb...etc...
+
+		lastStepTime: 	5139178
+
+		lastStepMessage: 	nil
+
+		lastCycleTime: 	5139218
+
+		alarms: 	a Heap()
+
+		lastAlarmTime: 	5139178
+
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+
+
+
+WorldState>>doOneCycleFor:
+
+	Receiver: a WorldState
+
+	Arguments and temporary variables: 
+
+		aWorld: 	a PasteUpMorph(425197568) [world]
+
+	Receiver's instance variables: 
+
+		hands: 	an Array(a HandMorph(843055104))
+
+		viewBox: 	0@0 corner: 1280@689
+
+		canvas: 	a FormCanvas on: DisplayScreen(1280x689x32)
+
+		damageRecorder: 	a DamageRecorder
+
+		stepList: 	a Heap(StepMessage(#stepAt: -> a PreDebugWindow(1049362432))(a PreDeb...etc...
+
+		lastStepTime: 	5139178
+
+		lastStepMessage: 	nil
+
+		lastCycleTime: 	5139218
+
+		alarms: 	a Heap()
+
+		lastAlarmTime: 	5139178
+
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+
+
+
+PasteUpMorph>>doOneCycle
+
+	Receiver: a PasteUpMorph(425197568) [world]
+
+	Arguments and temporary variables: 
+
+
+
+	Receiver's instance variables: 
+
+		bounds: 	0@0 corner: 1280@689
+
+		owner: 	nil
+
+		submorphs: 	an Array(a TaskbarMorph(984088576) a PreDebugWindow(1049362432) a Sy...etc...
+
+		fullBounds: 	nil
+
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+
+		extension: 	a MorphExtension (666632192) [eventHandler = an EventHandler]  [othe...etc...
+
+		borderWidth: 	0
+
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+
+		backgroundMorph: 	nil
+
+		worldState: 	a WorldState
+
+		griddingOn: 	nil
+
+
+
+
+
+[[World doOneCycle.
+	Processor yield.
+	false] whileFalse.
+	nil] in Project class>>spawnNewProcess
+
+	Receiver: Project
+
+	Arguments and temporary variables: 
+
+
+
+	Receiver's instance variables: 
+
+		superclass: 	Model
+
+		methodDict: 	a MethodDictionary(#beep->(Project>>#beep "a CompiledMethod(7072645...etc...
+
+		format: 	132
+
+		instanceVariables: 	nil
+
+		organization: 	('*sound' beep)
+
+
+		subclasses: 	nil
+
+		name: 	#Project
+
+		classPool: 	a Dictionary(#UIProcess->a Process in nil )
+
+		sharedPools: 	nil
+
+		environment: 	a SystemDictionary(lots of globals)
+
+		category: 	#'System-Support'
+
+		traitComposition: 	{}
+
+		localSelectors: 	nil
+
+
+
+
+
+[self value.
+	Processor terminateActive] in BlockClosure>>newProcess
+
+	Receiver: [[World doOneCycle.
+	Processor yield.
+	false] whileFalse.
+	nil]
+
+	Arguments and temporary variables: 
+
+
+
+	Receiver's instance variables: 
+
+		outerContext: 	Project class>>spawnNewProcess
+
+		startpc: 	57
+
+		numArgs: 	0
+
+
+
+
+
+
+
+--- The full stack ---
+
+ByteString(Object)>>doesNotUnderstand: #requestInspect
+
+AmberObjectMirrorInspector>>inspectSelection
+
+AmberObjectMirrorInspector(Object)>>perform:orSendTo:
+
+[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector]
+		ifFalse: [selArgCount = arguments size
+				ifTrue: [target perform: selector withArguments: arguments]
+				ifFalse: [target
+						perform: selector
+						withArguments: (arguments copyWith: evt)]].
+	self changed] in ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+BlockClosure>>ensure:
+
+CursorWithMask(Cursor)>>showWhile:
+
+ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+
+ToggleMenuItemMorph(MenuItemMorph)>>mouseUp:
+
+ToggleMenuItemMorph(MenuItemMorph)>>handleMouseUp:
+
+MouseButtonEvent>>sentTo:
+
+ToggleMenuItemMorph(Morph)>>handleEvent:
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+ToggleMenuItemMorph(Morph)>>processEvent:using:
+
+MorphicEventDispatcher>>dispatchDefault:with:
+
+MorphicEventDispatcher>>dispatchEvent:with:
+
+MenuMorph(Morph)>>processEvent:using:
+
+MenuMorph(Morph)>>processEvent:
+
+MenuMorph>>handleFocusEvent:
+
+[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+				handleFocusEvent: (anEvent
+						transformedBy: (focusHolder transformedFrom: self))] in HandMorph>>sendFocusEvent:to:clear:
+
+[aBlock value] in PasteUpMorph>>becomeActiveDuring:
+
+BlockClosure>>on:do:
+
+PasteUpMorph>>becomeActiveDuring:
+
+HandMorph>>sendFocusEvent:to:clear:
+
+HandMorph>>sendEvent:focus:clear:
+
+HandMorph>>sendMouseEvent:
+
+HandMorph>>handleEvent:
+
+HandMorph>>processEvents
+
+[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil] in WorldState>>doOneCycleNowFor:
+
+Array(SequenceableCollection)>>do:
+
+WorldState>>handsDo:
+
+WorldState>>doOneCycleNowFor:
+
+WorldState>>doOneCycleFor:
+
+PasteUpMorph>>doOneCycle
+
+[[World doOneCycle.
+	Processor yield.
+	false] whileFalse.
+	nil] in Project class>>spawnNewProcess
+
+[self value.
+	Processor terminateActive] in BlockClosure>>newProcess
+
+------------------------------------------------------------
+
+
+

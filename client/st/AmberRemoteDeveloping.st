@@ -33,9 +33,7 @@ answerWithObject: aString
 	"Answer Pharo with JSON-representation of object with id = aString in session dictionary"
 	| object |
 	object := AmberSessionObjects session objectAt: aString.
-	object 
-			ifNil: [  self sendReply: 'object#' withString: 'nil' ]
-			ifNotNil: [ self sendReply: 'object#' withString: ( AmberSessionObjects objectAsString: object ) ]
+	self sendReply: 'object#' withString: ( AmberSessionObjects objectAsString: object )
 !
 
 createDefaultConnection
@@ -44,18 +42,24 @@ createDefaultConnection
 !
 
 processMessage: aMessage
+	| object |
 	"Parsing incoming messages and processing them"
 	self showMessage: aMessage.
 	
 	(aMessage match: 'doIt#')  
 		ifTrue: [ 
-			self evaluateString: (aMessage replace: 'doIt#' with: '') ] .
+			object := self evaluateString: (aMessage replace: 'doIt#' with: '').
+			AmberSessionObjects session appendObject: object] .
     (aMessage match: 'printIt#')  
 		ifTrue: [ 
-			self printObject: ( self evaluateString: (aMessage replace: 'printIt#' with: ''))  ].
+			object :=  self evaluateString: (aMessage replace: 'printIt#' with: '').
+			self printObject: object.
+			AmberSessionObjects session appendObject: object].
 	(aMessage match: 'inspectIt#')  
 		ifTrue: [ 
-			self inspectObject: (self evaluateString: ( aMessage replace: 'inspectIt#' with: '')) ].
+			object := self evaluateString: ( aMessage replace: 'inspectIt#' with: '').
+			self inspectObject: object.
+			AmberSessionObjects session appendObject: object].
 	(aMessage match: 'object#')
 		ifTrue:[
 			self answerWithObject: (aMessage replace: 'object#' with: '') ].
@@ -72,9 +76,7 @@ sendReply: aHeader withString: aString
 evaluateString: aString
 	"Evaluating message = aString and returning result of this operation. Also generated object will be available in session dictionary"
 	| result |
-	result := Compiler new evaluateExpression: aString.
-	AmberSessionObjects session appendObject: result.
-	^result
+	^( Compiler new evaluateExpression: aString )
 ! !
 
 !AmberRemoteDevelopingClient methodsFor: 'inspecting'!
@@ -118,7 +120,7 @@ appendObject: anObject
 objectAt: aHash
 	"Returns object with id = aHash, otherwise returns nill"
 	"abc"
-	^self at: ( aHash asString ) ifPresent: [ self at: ( aHash asString) ] ifAbsent: [ nil ]
+	^self at: ( aHash asString ) ifPresent: [ self at: ( aHash asString) ] ifAbsent: [ AmberUndefinedObject new ]
 ! !
 
 AmberSessionObjects class instanceVariableNames: 'session'!
@@ -131,8 +133,12 @@ collectionAsString: aCollection
 	json := '[ '.
 	aCollection do: [:each |
 		json := json, '{ ', ( self concreteObjectAsString: each ) , '},' ].
-	json := json, '#'.
-	json := json replace: ',#' with: ' ]'.
+	aCollection size > 0 
+		ifTrue: [
+			json := json, '#'.
+			json := json replace: ',#' with: ' ]' ]
+		ifFalse:[
+			json := json, ' ]'	].
 	^json
 !
 
@@ -168,5 +174,15 @@ session
 	"Returns AmberSessionObjects object, that holds all used objects with their id`s"
 	session ifNil: [ session := AmberSessionObjects new ].
 	^session
+! !
+
+Object subclass: #AmberUndefinedObject
+	instanceVariableNames: 'instance'
+	package: 'AmberRemoteDeveloping'!
+
+!AmberUndefinedObject methodsFor: 'not yet classified'!
+
+instance
+	^nil
 ! !
 

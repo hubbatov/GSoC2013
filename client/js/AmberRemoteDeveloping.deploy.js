@@ -42,16 +42,10 @@ selector: "answerWithObject:",
 fn: function (aString){
 var self=this;
 var object;
-return smalltalk.withContext(function($ctx1) { var $1;
-object=_st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._objectAt_(aString);
-$1=object;
-if(($receiver = $1) == nil || $receiver == undefined){
-_st(self)._sendReply_withString_("object#","nil");
-} else {
+return smalltalk.withContext(function($ctx1) { object=_st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._objectAt_(aString);
 _st(self)._sendReply_withString_("object#",_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._objectAsString_(object));
-};
 return self}, function($ctx1) {$ctx1.fill(self,"answerWithObject:",{aString:aString,object:object},smalltalk.AmberRemoteDevelopingClient)})},
-messageSends: ["objectAt:", "session", "ifNil:ifNotNil:", "sendReply:withString:", "objectAsString:"]}),
+messageSends: ["objectAt:", "session", "sendReply:withString:", "objectAsString:"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
@@ -75,12 +69,10 @@ fn: function (aString){
 var self=this;
 var result;
 return smalltalk.withContext(function($ctx1) { var $1;
-result=_st(_st((smalltalk.Compiler || Compiler))._new())._evaluateExpression_(aString);
-_st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._appendObject_(result);
-$1=result;
+$1=_st(_st((smalltalk.Compiler || Compiler))._new())._evaluateExpression_(aString);
 return $1;
 }, function($ctx1) {$ctx1.fill(self,"evaluateString:",{aString:aString,result:result},smalltalk.AmberRemoteDevelopingClient)})},
-messageSends: ["evaluateExpression:", "new", "appendObject:", "session"]}),
+messageSends: ["evaluateExpression:", "new"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
@@ -111,26 +103,35 @@ smalltalk.method({
 selector: "processMessage:",
 fn: function (aMessage){
 var self=this;
+var object;
 return smalltalk.withContext(function($ctx1) { var $1,$2,$3,$4;
 _st(self)._showMessage_(aMessage);
 $1=_st(aMessage)._match_("doIt#");
 if(smalltalk.assert($1)){
-_st(self)._evaluateString_(_st(aMessage)._replace_with_("doIt#",""));
+object=_st(self)._evaluateString_(_st(aMessage)._replace_with_("doIt#",""));
+object;
+_st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._appendObject_(object);
 };
 $2=_st(aMessage)._match_("printIt#");
 if(smalltalk.assert($2)){
-_st(self)._printObject_(_st(self)._evaluateString_(_st(aMessage)._replace_with_("printIt#","")));
+object=_st(self)._evaluateString_(_st(aMessage)._replace_with_("printIt#",""));
+object;
+_st(self)._printObject_(object);
+_st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._appendObject_(object);
 };
 $3=_st(aMessage)._match_("inspectIt#");
 if(smalltalk.assert($3)){
-_st(self)._inspectObject_(_st(self)._evaluateString_(_st(aMessage)._replace_with_("inspectIt#","")));
+object=_st(self)._evaluateString_(_st(aMessage)._replace_with_("inspectIt#",""));
+object;
+_st(self)._inspectObject_(object);
+_st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._appendObject_(object);
 };
 $4=_st(aMessage)._match_("object#");
 if(smalltalk.assert($4)){
 _st(self)._answerWithObject_(_st(aMessage)._replace_with_("object#",""));
 };
-return self}, function($ctx1) {$ctx1.fill(self,"processMessage:",{aMessage:aMessage},smalltalk.AmberRemoteDevelopingClient)})},
-messageSends: ["showMessage:", "ifTrue:", "evaluateString:", "replace:with:", "match:", "printObject:", "inspectObject:", "answerWithObject:"]}),
+return self}, function($ctx1) {$ctx1.fill(self,"processMessage:",{aMessage:aMessage,object:object},smalltalk.AmberRemoteDevelopingClient)})},
+messageSends: ["showMessage:", "ifTrue:", "evaluateString:", "replace:with:", "appendObject:", "session", "match:", "printObject:", "inspectObject:", "answerWithObject:"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
@@ -199,11 +200,11 @@ return smalltalk.withContext(function($ctx1) { var $1;
 $1=_st(self)._at_ifPresent_ifAbsent_(_st(aHash)._asString(),(function(){
 return smalltalk.withContext(function($ctx2) {return _st(self)._at_(_st(aHash)._asString());
 }, function($ctx2) {$ctx2.fillBlock({},$ctx1)})}),(function(){
-return smalltalk.withContext(function($ctx2) {return nil;
+return smalltalk.withContext(function($ctx2) {return _st((smalltalk.AmberUndefinedObject || AmberUndefinedObject))._new();
 }, function($ctx2) {$ctx2.fillBlock({},$ctx1)})}));
 return $1;
 }, function($ctx1) {$ctx1.fill(self,"objectAt:",{aHash:aHash},smalltalk.AmberSessionObjects)})},
-messageSends: ["at:ifPresent:ifAbsent:", "asString", "at:"]}),
+messageSends: ["at:ifPresent:ifAbsent:", "asString", "at:", "new"]}),
 smalltalk.AmberSessionObjects);
 
 
@@ -215,18 +216,26 @@ selector: "collectionAsString:",
 fn: function (aCollection){
 var self=this;
 var json;
-return smalltalk.withContext(function($ctx1) { var $1;
+return smalltalk.withContext(function($ctx1) { var $1,$2;
 json="[ ";
 _st(aCollection)._do_((function(each){
 return smalltalk.withContext(function($ctx2) {json=_st(_st(_st(json).__comma("{ ")).__comma(_st(self)._concreteObjectAsString_(each))).__comma("},");
 return json;
 }, function($ctx2) {$ctx2.fillBlock({each:each},$ctx1)})}));
+$1=_st(_st(aCollection)._size()).__gt((0));
+if(smalltalk.assert($1)){
 json=_st(json).__comma("#");
+json;
 json=_st(json)._replace_with_(",#"," ]");
-$1=json;
-return $1;
+json;
+} else {
+json=_st(json).__comma(" ]");
+json;
+};
+$2=json;
+return $2;
 }, function($ctx1) {$ctx1.fill(self,"collectionAsString:",{aCollection:aCollection,json:json},smalltalk.AmberSessionObjects.klass)})},
-messageSends: ["do:", ",", "concreteObjectAsString:", "replace:with:"]}),
+messageSends: ["do:", ",", "concreteObjectAsString:", "ifTrue:ifFalse:", "replace:with:", ">", "size"]}),
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
@@ -299,5 +308,19 @@ return $2;
 }, function($ctx1) {$ctx1.fill(self,"session",{},smalltalk.AmberSessionObjects.klass)})},
 messageSends: ["ifNil:", "new"]}),
 smalltalk.AmberSessionObjects.klass);
+
+
+smalltalk.addClass('AmberUndefinedObject', smalltalk.Object, ['instance'], 'AmberRemoteDeveloping');
+smalltalk.addMethod(
+"_instance",
+smalltalk.method({
+selector: "instance",
+fn: function (){
+var self=this;
+return smalltalk.withContext(function($ctx1) { return nil;
+}, function($ctx1) {$ctx1.fill(self,"instance",{},smalltalk.AmberUndefinedObject)})},
+messageSends: []}),
+smalltalk.AmberUndefinedObject);
+
 
 
