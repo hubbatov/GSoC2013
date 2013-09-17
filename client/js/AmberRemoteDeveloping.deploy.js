@@ -1,7 +1,6 @@
 smalltalk.addPackage('AmberRemoteDeveloping');
 smalltalk.addClass('AmberRemoteConnector', smalltalk.Object, ['socket'], 'AmberRemoteDeveloping');
 smalltalk.addMethod(
-"_createSocket_",
 smalltalk.method({
 selector: "createSocket:",
 fn: function (aBlock){
@@ -20,7 +19,6 @@ messageSends: ["constructor:value:", "onopen:", "send:", "alert:", "onmessage:",
 smalltalk.AmberRemoteConnector);
 
 smalltalk.addMethod(
-"_socket",
 smalltalk.method({
 selector: "socket",
 fn: function (){
@@ -36,7 +34,6 @@ smalltalk.AmberRemoteConnector);
 
 smalltalk.addClass('AmberRemoteDevelopingClient', smalltalk.Object, ['client'], 'AmberRemoteDeveloping');
 smalltalk.addMethod(
-"_answerWithObject_",
 smalltalk.method({
 selector: "answerWithObject:",
 fn: function (aString){
@@ -49,7 +46,6 @@ messageSends: ["objectAt:", "session", "sendReply:withString:", "objectAsString:
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
-"_createDefaultConnection",
 smalltalk.method({
 selector: "createDefaultConnection",
 fn: function (){
@@ -62,7 +58,6 @@ messageSends: ["createSocket:", "processMessage:", "data", "new"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
-"_evaluateString_",
 smalltalk.method({
 selector: "evaluateString:",
 fn: function (aString){
@@ -76,7 +71,6 @@ messageSends: ["evaluateExpression:", "new"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
-"_inspectObject_",
 smalltalk.method({
 selector: "inspectObject:",
 fn: function (anObject){
@@ -87,7 +81,6 @@ messageSends: ["sendReply:withString:", "asString", "identityHash"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
-"_printObject_",
 smalltalk.method({
 selector: "printObject:",
 fn: function (anObject){
@@ -98,7 +91,6 @@ messageSends: ["sendReply:withString:", "printString"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
-"_processMessage_",
 smalltalk.method({
 selector: "processMessage:",
 fn: function (aMessage){
@@ -135,7 +127,6 @@ messageSends: ["showMessage:", "ifTrue:", "evaluateString:", "replace:with:", "a
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
-"_sendReply_withString_",
 smalltalk.method({
 selector: "sendReply:withString:",
 fn: function (aHeader,aString){
@@ -152,7 +143,6 @@ messageSends: ["ifNotNil:", "send:", ",", "socket"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
-"_showMessage_",
 smalltalk.method({
 selector: "showMessage:",
 fn: function (aMessage){
@@ -174,7 +164,6 @@ smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addClass('AmberSessionObjects', smalltalk.Dictionary, [], 'AmberRemoteDeveloping');
 smalltalk.addMethod(
-"_appendObject_",
 smalltalk.method({
 selector: "appendObject:",
 fn: function (anObject){
@@ -191,7 +180,6 @@ messageSends: ["asString", "identityHash", "show:", "cr", "at:put:"]}),
 smalltalk.AmberSessionObjects);
 
 smalltalk.addMethod(
-"_objectAt_",
 smalltalk.method({
 selector: "objectAt:",
 fn: function (aHash){
@@ -210,36 +198,26 @@ smalltalk.AmberSessionObjects);
 
 smalltalk.AmberSessionObjects.klass.iVarNames = ['session'];
 smalltalk.addMethod(
-"_collectionAsString_",
 smalltalk.method({
 selector: "collectionAsString:",
 fn: function (aCollection){
 var self=this;
 var json;
-return smalltalk.withContext(function($ctx1) { var $1,$2;
-json="[ ";
-_st(aCollection)._do_((function(each){
-return smalltalk.withContext(function($ctx2) {json=_st(_st(_st(json).__comma("{ ")).__comma(_st(self)._concreteObjectAsString_(each))).__comma("},");
+return smalltalk.withContext(function($ctx1) { 
+var $1;
+json="";
+_st(aCollection)._withIndexDo_((function(each,index){
+return smalltalk.withContext(function($ctx2) {
+json=_st(_st(_st(_st(_st(_st(json).__comma("\x22")).__comma(_st(index)._printString())).__comma("\x22 : ")).__comma("{ ")).__comma(_st(self)._concreteObjectAsString_(each))).__comma("},");
 return json;
-}, function($ctx2) {$ctx2.fillBlock({each:each},$ctx1)})}));
-$1=_st(_st(aCollection)._size()).__gt((0));
-if(smalltalk.assert($1)){
-json=_st(json).__comma("#");
-json;
-json=_st(json)._replace_with_(",#"," ]");
-json;
-} else {
-json=_st(json).__comma(" ]");
-json;
-};
-$2=json;
-return $2;
+}, function($ctx2) {$ctx2.fillBlock({each:each,index:index},$ctx1)})}));
+$1=json;
+return $1;
 }, function($ctx1) {$ctx1.fill(self,"collectionAsString:",{aCollection:aCollection,json:json},smalltalk.AmberSessionObjects.klass)})},
-messageSends: ["do:", ",", "concreteObjectAsString:", "ifTrue:ifFalse:", "replace:with:", ">", "size"]}),
+messageSends: ["withIndexDo:", ",", "concreteObjectAsString:", "printString"]}),
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
-"_concreteObjectAsString_",
 smalltalk.method({
 selector: "concreteObjectAsString:",
 fn: function (anObject){
@@ -253,18 +231,19 @@ messageSends: ["appendObject:", "session", ",", "printString", "asString", "clas
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
-"_objectAsString_",
 smalltalk.method({
 selector: "objectAsString:",
 fn: function (anObject){
 var self=this;
 var json;
-return smalltalk.withContext(function($ctx1) { var $1,$2,$3,$4;
+return smalltalk.withContext(function($ctx1) { 
+var $1,$2,$3,$4;
 _st(_st(self)._session())._appendObject_(anObject);
 json="{ ";
 json=_st(json).__comma(_st(self)._concreteObjectAsString_(anObject));
 _st(_st(_st(anObject)._class())._allInstanceVariableNames())._do_((function(each){
-return smalltalk.withContext(function($ctx2) {json=_st(_st(_st(_st(_st(json).__comma(", \x22")).__comma(_st(each)._asString())).__comma("\x22: { ")).__comma(_st(self)._concreteObjectAsString_(_st(anObject)._instVarAt_(each)))).__comma("}");
+return smalltalk.withContext(function($ctx2) {
+json=_st(_st(_st(_st(_st(json).__comma(", \x22")).__comma(_st(each)._asString())).__comma("\x22: { ")).__comma(_st(self)._concreteObjectAsString_(_st(anObject)._instVarAt_(each)))).__comma("}");
 return json;
 }, function($ctx2) {$ctx2.fillBlock({each:each},$ctx1)})}));
 $1=_st(_st(_st(anObject)._class())._asString()).__eq("Dictionary");
@@ -279,7 +258,7 @@ json;
 };
 $3=_st(_st(_st(anObject)._class())._asString()).__eq("String");
 if(smalltalk.assert($3)){
-json=_st(_st(json).__comma(", \x22content\x22: ")).__comma(_st(self)._collectionAsString_(anObject));
+json=_st(_st(json).__comma(", ")).__comma(_st(self)._collectionAsString_(anObject));
 json;
 };
 json=_st(json).__comma("}");
@@ -290,7 +269,6 @@ messageSends: ["appendObject:", "session", ",", "concreteObjectAsString:", "do:"
 smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addMethod(
-"_session",
 smalltalk.method({
 selector: "session",
 fn: function (){
@@ -312,7 +290,6 @@ smalltalk.AmberSessionObjects.klass);
 
 smalltalk.addClass('AmberUndefinedObject', smalltalk.Object, ['instance'], 'AmberRemoteDeveloping');
 smalltalk.addMethod(
-"_instance",
 smalltalk.method({
 selector: "instance",
 fn: function (){
