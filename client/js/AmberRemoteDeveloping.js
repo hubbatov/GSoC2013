@@ -59,7 +59,7 @@ return smalltalk.withContext(function($ctx1) { object=_st(_st((smalltalk.AmberS
 _st(self)._sendReply_withString_("object#",_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._objectAsString_(object));
 return self}, function($ctx1) {$ctx1.fill(self,"answerWithObject:",{aString:aString,object:object},smalltalk.AmberRemoteDevelopingClient)})},
 args: ["aString"],
-source: "answerWithObject: aString\x0a\x09\x22Answer Pharo with JSON-representation of object with id = aString in session dictionary\x22\x0a\x09| object |\x0a\x09object := AmberSessionObjects session objectAt: aString.\x0a\x09self sendReply: 'object#' withString: ( AmberSessionObjects objectAsString: object ) ",
+source: "answerWithObject: aString\x0a\x09\x22Answer Pharo with JSON-representation of object with id = aString in session dictionary\x22\x0a\x09| object |\x0a\x09object := AmberSessionObjects session objectAt: aString.\x0a\x09self sendReply: 'object#' withString: ( AmberSessionObjects objectAsString: object )",
 messageSends: ["objectAt:", "session", "sendReply:withString:", "objectAsString:"],
 referencedClasses: ["AmberSessionObjects"]
 }),
@@ -280,28 +280,31 @@ category: 'converting',
 fn: function (aCollection){
 var self=this;
 var json;
-return smalltalk.withContext(function($ctx1) { var $1,$2;
-json="[ ";
-_st(aCollection)._do_((function(each){
-return smalltalk.withContext(function($ctx2) {json=_st(_st(_st(json).__comma("{ ")).__comma(_st(self)._concreteObjectAsString_(each))).__comma("},");
-return json;
-}, function($ctx2) {$ctx2.fillBlock({each:each},$ctx1)})}));
-$1=_st(_st(aCollection)._size()).__gt((0));
-if(smalltalk.assert($1)){
-json=_st(json).__comma("#");
-json;
-json=_st(json)._replace_with_(",#"," ]");
-json;
+return smalltalk.withContext(function($ctx1) { var $7,$9,$8,$6,$5,$4,$3,$2,$1,$10;
+json="";
+_st(aCollection)._withIndexDo_((function(each,index){
+return smalltalk.withContext(function($ctx2) {$7=json;
+$9=_st(index).__eq_eq((1));
+if(smalltalk.assert($9)){
+$8=" ";
 } else {
-json=_st(json).__comma(" ]");
-json;
+$8=" , ";
 };
-$2=json;
-return $2;
+$6=_st($7).__comma($8);
+$5=_st($6).__comma("\x22");
+$4=_st($5).__comma(_st(index)._printString());
+$3=_st($4).__comma("\x22 : ");
+$2=_st($3).__comma("{ ");
+$1=_st($2).__comma(_st(self)._concreteObjectAsString_(each));
+json=_st($1).__comma("}");
+return json;
+}, function($ctx2) {$ctx2.fillBlock({each:each,index:index},$ctx1)})}));
+$10=json;
+return $10;
 }, function($ctx1) {$ctx1.fill(self,"collectionAsString:",{aCollection:aCollection,json:json},smalltalk.AmberSessionObjects.klass)})},
 args: ["aCollection"],
-source: "collectionAsString: aCollection\x0a\x09\x22Converting collection to json \x22\x0a\x09| json |\x0a\x09json := '[ '.\x0a\x09aCollection do: [:each |\x0a\x09\x09json := json, '{ ', ( self concreteObjectAsString: each ) , '},' ].\x0a\x09aCollection size > 0 \x0a\x09\x09ifTrue: [\x0a\x09\x09\x09json := json, '#'.\x0a\x09\x09\x09json := json replace: ',#' with: ' ]' ]\x0a\x09\x09ifFalse:[\x0a\x09\x09\x09json := json, ' ]'\x09].\x0a\x09^json",
-messageSends: ["do:", ",", "concreteObjectAsString:", "ifTrue:ifFalse:", "replace:with:", ">", "size"],
+source: "collectionAsString: aCollection\x0a\x09\x22Converting collection to json \x22\x0a\x09| json |\x0a\x09json := ''.\x0a\x09aCollection withIndexDo: [:each :index |\x0a\x09\x09json := json, (index == 1 ifFalse: [' , '] ifTrue: [' ']),  '\x22', index printString , '\x22 : ', '{ ', ( self concreteObjectAsString: each ) , '}' ].\x0a\x09^json",
+messageSends: ["withIndexDo:", ",", "concreteObjectAsString:", "printString", "ifFalse:ifTrue:", "=="],
 referencedClasses: []
 }),
 smalltalk.AmberSessionObjects.klass);
@@ -343,17 +346,17 @@ return json;
 }, function($ctx2) {$ctx2.fillBlock({each:each},$ctx1)})}));
 $1=_st(_st(_st(anObject)._class())._asString()).__eq("Dictionary");
 if(smalltalk.assert($1)){
-json=_st(_st(json).__comma(", \x22content\x22: ")).__comma(_st(self)._collectionAsString_(anObject));
+json=_st(_st(json).__comma(", ")).__comma(_st(self)._collectionAsString_(anObject));
 json;
 };
 $2=_st(_st(_st(anObject)._class())._asString()).__eq("Array");
 if(smalltalk.assert($2)){
-json=_st(_st(json).__comma(", \x22content\x22: ")).__comma(_st(self)._collectionAsString_(anObject));
+json=_st(_st(json).__comma(", ")).__comma(_st(self)._collectionAsString_(anObject));
 json;
 };
 $3=_st(_st(_st(anObject)._class())._asString()).__eq("String");
 if(smalltalk.assert($3)){
-json=_st(_st(json).__comma(", \x22content\x22: ")).__comma(_st(self)._collectionAsString_(anObject));
+json=_st(_st(json).__comma(", ")).__comma(_st(self)._collectionAsString_(anObject));
 json;
 };
 json=_st(json).__comma("}");
@@ -361,7 +364,7 @@ $4=json;
 return $4;
 }, function($ctx1) {$ctx1.fill(self,"objectAsString:",{anObject:anObject,json:json},smalltalk.AmberSessionObjects.klass)})},
 args: ["anObject"],
-source: "objectAsString: anObject\x0a\x09\x22Convert object = anObject to json\x22\x0a\x09| json |\x0a\x09self session appendObject: anObject.\x0a\x09json := '{ '.\x0a\x09json := json, ( self concreteObjectAsString: anObject ). \x0a\x09anObject class allInstanceVariableNames do: [:each |\x0a\x09\x09json := json, ', \x22' , each asString,'\x22: { ' , ( self concreteObjectAsString: ( anObject instVarAt: each)) , '}' ].\x0a\x09\x0a\x09anObject class asString = 'Dictionary' ifTrue: [\x0a\x09\x09json := json, ', \x22content\x22: ', ( self collectionAsString: anObject ).\x0a\x09].\x0a\x09anObject class asString = 'Array' ifTrue: [\x0a\x09\x09json := json, ', \x22content\x22: ', ( self collectionAsString: anObject ).\x0a\x09].\x0a\x09anObject class asString = 'String' ifTrue: [\x0a\x09\x09json := json, ', \x22content\x22: ', ( self collectionAsString: anObject ).\x0a\x09].\x0a\x09json := json, '}'.\x0a\x09^json",
+source: "objectAsString: anObject\x0a\x09\x22Convert object = anObject to json\x22\x0a\x09| json |\x0a\x09self session appendObject: anObject.\x0a\x09json := '{ '.\x0a\x09json := json, ( self concreteObjectAsString: anObject ). \x0a\x09anObject class allInstanceVariableNames do: [:each |\x0a\x09\x09json := json, ', \x22' , each asString,'\x22: { ' , ( self concreteObjectAsString: ( anObject instVarAt: each)) , '}' ].\x0a\x09\x0a\x09anObject class asString = 'Dictionary' ifTrue: [\x0a\x09\x09json := json, ', ', ( self collectionAsString: anObject ).\x0a\x09].\x0a\x09anObject class asString = 'Array' ifTrue: [\x0a\x09\x09json := json, ', ', ( self collectionAsString: anObject ).\x0a\x09].\x0a\x09anObject class asString = 'String' ifTrue: [\x0a\x09\x09json := json, ', ', ( self collectionAsString: anObject ).\x0a\x09].\x0a\x09json := json, '}'.\x0a\x09^json",
 messageSends: ["appendObject:", "session", ",", "concreteObjectAsString:", "do:", "instVarAt:", "asString", "allInstanceVariableNames", "class", "ifTrue:", "collectionAsString:", "="],
 referencedClasses: []
 }),
