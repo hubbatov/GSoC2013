@@ -5,7 +5,7 @@ smalltalk.addMethod(
 "_createSocket_",
 smalltalk.method({
 selector: "createSocket:",
-category: 'not yet classified',
+category: 'creating',
 fn: function (aBlock){
 var self=this;
 return smalltalk.withContext(function($ctx1) { self["@socket"]=_st((smalltalk.NativeFunction || NativeFunction))._constructor_value_("WebSocket","ws://localhost:9090/broadcast");
@@ -29,7 +29,7 @@ smalltalk.addMethod(
 "_socket",
 smalltalk.method({
 selector: "socket",
-category: 'not yet classified',
+category: 'accessing',
 fn: function (){
 var self=this;
 return smalltalk.withContext(function($ctx1) { var $1;
@@ -144,7 +144,8 @@ var self=this;
 var object;
 return smalltalk.withContext(function($ctx1) { var $1,$2,$3,$4;
 _st(self)._showMessage_(aMessage);
-$1=_st(aMessage)._match_("doIt#");
+_st((function(){
+return smalltalk.withContext(function($ctx2) {$1=_st(aMessage)._match_("doIt#");
 if(smalltalk.assert($1)){
 object=_st(self)._evaluateString_(_st(aMessage)._replace_with_("doIt#",""));
 object;
@@ -166,13 +167,16 @@ _st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._app
 };
 $4=_st(aMessage)._match_("object#");
 if(smalltalk.assert($4)){
-_st(self)._answerWithObject_(_st(aMessage)._replace_with_("object#",""));
+return _st(self)._answerWithObject_(_st(aMessage)._replace_with_("object#",""));
 };
+}, function($ctx2) {$ctx2.fillBlock({},$ctx1)})}))._on_do_((smalltalk.Error || Error),(function(ex){
+return smalltalk.withContext(function($ctx2) {return _st(self)._throwError_(ex);
+}, function($ctx2) {$ctx2.fillBlock({ex:ex},$ctx1)})}));
 return self}, function($ctx1) {$ctx1.fill(self,"processMessage:",{aMessage:aMessage,object:object},smalltalk.AmberRemoteDevelopingClient)})},
 args: ["aMessage"],
-source: "processMessage: aMessage\x0a\x09| object |\x0a\x09\x22Parsing incoming messages and processing them\x22\x0a\x09self showMessage: aMessage.\x0a\x09\x0a\x09(aMessage match: 'doIt#')  \x0a\x09\x09ifTrue: [ \x0a\x09\x09\x09object := self evaluateString: (aMessage replace: 'doIt#' with: '').\x0a\x09\x09\x09AmberSessionObjects session appendObject: object] .\x0a    (aMessage match: 'printIt#')  \x0a\x09\x09ifTrue: [ \x0a\x09\x09\x09object :=  self evaluateString: (aMessage replace: 'printIt#' with: '').\x0a\x09\x09\x09self printObject: object.\x0a\x09\x09\x09AmberSessionObjects session appendObject: object].\x0a\x09(aMessage match: 'inspectIt#')  \x0a\x09\x09ifTrue: [ \x0a\x09\x09\x09object := self evaluateString: ( aMessage replace: 'inspectIt#' with: '').\x0a\x09\x09\x09self inspectObject: object.\x0a\x09\x09\x09AmberSessionObjects session appendObject: object].\x0a\x09(aMessage match: 'object#')\x0a\x09\x09ifTrue:[\x0a\x09\x09\x09self answerWithObject: (aMessage replace: 'object#' with: '') ].",
-messageSends: ["showMessage:", "ifTrue:", "evaluateString:", "replace:with:", "appendObject:", "session", "match:", "printObject:", "inspectObject:", "answerWithObject:"],
-referencedClasses: ["AmberSessionObjects"]
+source: "processMessage: aMessage\x0a\x09| object |\x0a\x09\x22Parsing incoming messages and processing them\x22\x0a\x09self showMessage: aMessage.\x0a\x09\x0a\x09[ (aMessage match: 'doIt#')  \x0a\x09\x09ifTrue: [ \x0a\x09\x09\x09object := self evaluateString: (aMessage replace: 'doIt#' with: '').\x0a\x09\x09\x09AmberSessionObjects session appendObject: object] .\x0a    (aMessage match: 'printIt#')  \x0a\x09\x09ifTrue: [ \x0a\x09\x09\x09object :=  self evaluateString: (aMessage replace: 'printIt#' with: '').\x0a\x09\x09\x09self printObject: object.\x0a\x09\x09\x09AmberSessionObjects session appendObject: object].\x0a\x09(aMessage match: 'inspectIt#')  \x0a\x09\x09ifTrue: [ \x0a\x09\x09\x09object := self evaluateString: ( aMessage replace: 'inspectIt#' with: '').\x0a\x09\x09\x09self inspectObject: object.\x0a\x09\x09\x09AmberSessionObjects session appendObject: object].\x0a\x09(aMessage match: 'object#')\x0a\x09\x09ifTrue:[\x0a\x09\x09\x09self answerWithObject: (aMessage replace: 'object#' with: '') ] ] on: Error do: [ : ex | self throwError: ex  ] ",
+messageSends: ["showMessage:", "on:do:", "throwError:", "ifTrue:", "evaluateString:", "replace:with:", "appendObject:", "session", "match:", "printObject:", "inspectObject:", "answerWithObject:"],
+referencedClasses: ["Error", "AmberSessionObjects"]
 }),
 smalltalk.AmberRemoteDevelopingClient);
 
@@ -219,6 +223,22 @@ args: ["aMessage"],
 source: "showMessage: aMessage\x0a\x09\x22Displays message aMessage on HTML page\x22\x0a\x09|div|\x0a\x09div := document getElementById: 'messagesField'.\x0a\x09div ifNotNil: [ div innerHTML: (div innerHTML), aMessage, String cr].",
 messageSends: ["getElementById:", "ifNotNil:", "innerHTML:", ",", "cr", "innerHTML"],
 referencedClasses: ["String"]
+}),
+smalltalk.AmberRemoteDevelopingClient);
+
+smalltalk.addMethod(
+"_throwError_",
+smalltalk.method({
+selector: "throwError:",
+category: 'errors',
+fn: function (error){
+var self=this;
+return smalltalk.withContext(function($ctx1) { _st(self)._sendReply_withString_("error#",_st(error)._messageText());
+return self}, function($ctx1) {$ctx1.fill(self,"throwError:",{error:error},smalltalk.AmberRemoteDevelopingClient)})},
+args: ["error"],
+source: "throwError: error\x0a\x09\x22Throws an error while processing message\x22\x0a\x09self sendReply: 'error#' withString: (  error messageText ).",
+messageSends: ["sendReply:withString:", "messageText"],
+referencedClasses: []
 }),
 smalltalk.AmberRemoteDevelopingClient);
 
@@ -397,6 +417,7 @@ smalltalk.AmberSessionObjects.klass);
 
 
 smalltalk.addClass('AmberUndefinedObject', smalltalk.Object, ['instance'], 'AmberRemoteDeveloping');
+smalltalk.AmberUndefinedObject.comment="Representation of nil object"
 smalltalk.addMethod(
 "_instance",
 smalltalk.method({
