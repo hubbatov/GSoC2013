@@ -5,7 +5,14 @@ Object subclass: #AmberRemoteConnector
 !AmberRemoteConnector commentStamp!
 This class represents connection made with WebSocket technology.!
 
-!AmberRemoteConnector methodsFor: 'not yet classified'!
+!AmberRemoteConnector methodsFor: 'accessing'!
+
+socket
+	"Returns socket variable"
+	^socket
+! !
+
+!AmberRemoteConnector methodsFor: 'creating'!
 
 createSocket: aBlock
 		"Creating client websocket and register the connection on server"
@@ -14,11 +21,6 @@ createSocket: aBlock
 		socket onopen: [ socket send: 'register#defaultConnection'. window alert: 'Connection opened'. ].
 		socket onmessage: aBlock.
 		socket onclose: [ self createSocket: aBlock ].
-!
-
-socket
-	"Returns socket variable"
-	^socket
 ! !
 
 Object subclass: #AmberRemoteDevelopingClient
@@ -46,7 +48,7 @@ processMessage: aMessage
 	"Parsing incoming messages and processing them"
 	self showMessage: aMessage.
 	
-	(aMessage match: 'doIt#')  
+	[ (aMessage match: 'doIt#')  
 		ifTrue: [ 
 			object := self evaluateString: (aMessage replace: 'doIt#' with: '').
 			AmberSessionObjects session appendObject: object] .
@@ -62,13 +64,20 @@ processMessage: aMessage
 			AmberSessionObjects session appendObject: object].
 	(aMessage match: 'object#')
 		ifTrue:[
-			self answerWithObject: (aMessage replace: 'object#' with: '') ].
+			self answerWithObject: (aMessage replace: 'object#' with: '') ] ] on: Error do: [ : ex | self throwError: ex  ]
 !
 
 sendReply: aHeader withString: aString
 	"Send answer to Pharo with header = aHeader and message = aString"
 	client socket ifNotNil: [
 		client socket send: ( aHeader, aString ) ]
+! !
+
+!AmberRemoteDevelopingClient methodsFor: 'errors'!
+
+throwError: error
+	"Throws an error while processing message"
+	self sendReply: 'error#' withString: (  error messageText ).
 ! !
 
 !AmberRemoteDevelopingClient methodsFor: 'evaluating'!
@@ -179,6 +188,8 @@ session
 Object subclass: #AmberUndefinedObject
 	instanceVariableNames: 'instance'
 	package: 'AmberRemoteDeveloping'!
+!AmberUndefinedObject commentStamp!
+Representation of nil object!
 
 !AmberUndefinedObject methodsFor: 'not yet classified'!
 

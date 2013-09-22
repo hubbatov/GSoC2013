@@ -98,7 +98,8 @@ var self=this;
 var object;
 return smalltalk.withContext(function($ctx1) { var $1,$2,$3,$4;
 _st(self)._showMessage_(aMessage);
-$1=_st(aMessage)._match_("doIt#");
+_st((function(){
+return smalltalk.withContext(function($ctx2) {$1=_st(aMessage)._match_("doIt#");
 if(smalltalk.assert($1)){
 object=_st(self)._evaluateString_(_st(aMessage)._replace_with_("doIt#",""));
 object;
@@ -120,10 +121,13 @@ _st(_st((smalltalk.AmberSessionObjects || AmberSessionObjects))._session())._app
 };
 $4=_st(aMessage)._match_("object#");
 if(smalltalk.assert($4)){
-_st(self)._answerWithObject_(_st(aMessage)._replace_with_("object#",""));
+return _st(self)._answerWithObject_(_st(aMessage)._replace_with_("object#",""));
 };
+}, function($ctx2) {$ctx2.fillBlock({},$ctx1)})}))._on_do_((smalltalk.Error || Error),(function(ex){
+return smalltalk.withContext(function($ctx2) {return _st(self)._throwError_(ex);
+}, function($ctx2) {$ctx2.fillBlock({ex:ex},$ctx1)})}));
 return self}, function($ctx1) {$ctx1.fill(self,"processMessage:",{aMessage:aMessage,object:object},smalltalk.AmberRemoteDevelopingClient)})},
-messageSends: ["showMessage:", "ifTrue:", "evaluateString:", "replace:with:", "appendObject:", "session", "match:", "printObject:", "inspectObject:", "answerWithObject:"]}),
+messageSends: ["showMessage:", "on:do:", "throwError:", "ifTrue:", "evaluateString:", "replace:with:", "appendObject:", "session", "match:", "printObject:", "inspectObject:", "answerWithObject:"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 smalltalk.addMethod(
@@ -158,6 +162,17 @@ _st(div)._innerHTML_(_st(_st(_st(div)._innerHTML()).__comma(aMessage)).__comma(_
 };
 return self}, function($ctx1) {$ctx1.fill(self,"showMessage:",{aMessage:aMessage,div:div},smalltalk.AmberRemoteDevelopingClient)})},
 messageSends: ["getElementById:", "ifNotNil:", "innerHTML:", ",", "cr", "innerHTML"]}),
+smalltalk.AmberRemoteDevelopingClient);
+
+smalltalk.addMethod(
+"_throwError_",
+smalltalk.method({
+selector: "throwError:",
+fn: function (error){
+var self=this;
+return smalltalk.withContext(function($ctx1) { _st(self)._sendReply_withString_("error#",_st(error)._messageText());
+return self}, function($ctx1) {$ctx1.fill(self,"throwError:",{error:error},smalltalk.AmberRemoteDevelopingClient)})},
+messageSends: ["sendReply:withString:", "messageText"]}),
 smalltalk.AmberRemoteDevelopingClient);
 
 
