@@ -167,13 +167,16 @@ objectAsString: anObject
 		json := json, ', "' , each asString,'": { ' , ( self concreteObjectAsString: ( anObject instVarAt: each)) , '}' ].
 	
 	anObject class asString = 'Dictionary' ifTrue: [
-		json := json, ', "content": ', ( self collectionAsString: anObject ).
+		anObject size = 0 ifFalse: [
+		json := json, ', "content": ', ( self collectionAsString: anObject ) ]
 	].
 	anObject class asString = 'Array' ifTrue: [
-		json := json, ', "content": ', ( self collectionAsString: anObject ).
+		anObject size = 0 ifFalse: [
+		json := json, ', "content": ', ( self collectionAsString: anObject ) ]
 	].
 	anObject class asString = 'String' ifTrue: [
-		json := json, ', "content": ', ( self collectionAsString: anObject ).
+		anObject size = 0 ifFalse: [
+		json := json, ', "content": ', ( self collectionAsString: anObject ) ]
 	].
 	json := json, '}'.
 	^json
