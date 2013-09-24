@@ -138,16 +138,10 @@ AmberSessionObjects class instanceVariableNames: 'session'!
 
 collectionAsString: aCollection
 	"Converting collection to json "
-	| json |
-	json := '[ '.
-	aCollection do: [:each |
-		json := json, '{ ', ( self concreteObjectAsString: each ) , '},' ].
-	aCollection size > 0 
-		ifTrue: [
-			json := json, '#'.
-			json := json replace: ',#' with: ' ]' ]
-		ifFalse:[
-			json := json, ' ]'	].
+		| json |
+	json := ''.
+	aCollection withIndexDo: [:each :index |
+		json := json, (index == 1 ifFalse: [' , '] ifTrue: [' ']),  '"', index printString , '" : ', '{ ', ( self concreteObjectAsString: each ) , '}' ].
 	^json
 !
 
@@ -168,15 +162,15 @@ objectAsString: anObject
 	
 	anObject class asString = 'Dictionary' ifTrue: [
 		anObject size = 0 ifFalse: [
-		json := json, ', "content": ', ( self collectionAsString: anObject ) ]
+		json := json, ', ', ( self collectionAsString: anObject ) ]
 	].
 	anObject class asString = 'Array' ifTrue: [
 		anObject size = 0 ifFalse: [
-		json := json, ', "content": ', ( self collectionAsString: anObject ) ]
+		json := json, ',  ', ( self collectionAsString: anObject ) ]
 	].
 	anObject class asString = 'String' ifTrue: [
 		anObject size = 0 ifFalse: [
-		json := json, ', "content": ', ( self collectionAsString: anObject ) ]
+		json := json, ', ', ( self collectionAsString: anObject ) ]
 	].
 	json := json, '}'.
 	^json

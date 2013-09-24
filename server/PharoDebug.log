@@ -42676,3 +42676,1761 @@ PasteUpMorph>>doOneCycle
 	Processor terminateActive] in BlockClosure>>newProcess
 ------------------------------------------------------------
 
+THERE_BE_DRAGONS_HERE
+PrimitiveFailed: primitive #primSocketSendDone: in a Socket[invalidSocketHandle] failed
+24 September 2013 1:41:53 pm
+
+VM: Win32 - IX86 - 6.2 - Croquet Closure Cog VM [CoInterpreter VMMaker-oscog-EstebanLorenzano.161]
+Image: Pharo1.3 [Latest update: #13315]
+
+Socket(Object)>>primitiveFailed:
+	Receiver: a Socket[invalidSocketHandle]
+	Arguments and temporary variables: 
+		selector: 	#primSocketSendDone:
+	Receiver's instance variables: 
+		semaphore: 	a Semaphore()
+		socketHandle: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+		writeSemaphore: 	a Semaphore()
+
+
+Socket(Object)>>primitiveFailed
+	Receiver: a Socket[invalidSocketHandle]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		semaphore: 	a Semaphore()
+		socketHandle: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+		writeSemaphore: 	a Semaphore()
+
+
+Socket>>primSocketSendDone:
+	Receiver: a Socket[invalidSocketHandle]
+	Arguments and temporary variables: 
+		socketID: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+	Receiver's instance variables: 
+		semaphore: 	a Semaphore()
+		socketHandle: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+		writeSemaphore: 	a Semaphore()
+
+
+Socket>>waitForSendDoneFor:
+	Receiver: a Socket[invalidSocketHandle]
+	Arguments and temporary variables: 
+		timeout: 	45
+		startTime: 	42019
+		msecsDelta: 	45000
+		msecsEllapsed: 	nil
+		sendDone: 	nil
+	Receiver's instance variables: 
+		semaphore: 	a Semaphore()
+		socketHandle: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+		writeSemaphore: 	a Semaphore()
+
+
+Socket>>sendSomeData:startIndex:count:for:
+	Receiver: a Socket[invalidSocketHandle]
+	Arguments and temporary variables: 
+		aStringOrByteArray: 	'HinspectIt#''OrderedCollection with: ''0'' with: 1 with: ...etc...
+		startIndex: 	1
+		count: 	74
+		aTimeoutInSeconds: 	45
+		bytesSent: 	nil
+	Receiver's instance variables: 
+		semaphore: 	a Semaphore()
+		socketHandle: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+		writeSemaphore: 	a Semaphore()
+
+
+Socket>>sendSomeData:startIndex:count:
+	Receiver: a Socket[invalidSocketHandle]
+	Arguments and temporary variables: 
+		aStringOrByteArray: 	'HinspectIt#''OrderedCollection with: ''0'' with: 1 with: ...etc...
+		startIndex: 	1
+		count: 	74
+	Receiver's instance variables: 
+		semaphore: 	a Semaphore()
+		socketHandle: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+		writeSemaphore: 	a Semaphore()
+
+
+Socket>>sendData:count:
+	Receiver: a Socket[invalidSocketHandle]
+	Arguments and temporary variables: 
+		buffer: 	'HinspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point x: 2 ...etc...
+		n: 	74
+		sent: 	0
+	Receiver's instance variables: 
+		semaphore: 	a Semaphore()
+		socketHandle: 	#[219 192 70 82 0 0 0 0 112 170 149 10]
+		readSemaphore: 	a Semaphore(a Process in [self schedule.
+	beingWaitedOn
+		ifTrue...etc...
+		writeSemaphore: 	a Semaphore()
+
+
+[socket sendData: outBuffer count: outNextToWrite - 1] in SocketStream>>flush
+	Receiver: SocketStream[inbuf:4kb/outbuf:4kb]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		recentlyRead: 	42
+		socket: 	a Socket[invalidSocketHandle]
+		inBuffer: 	'GET /broadcast HTTP/1.1
+
+Upgrade: websocket
+
+Connection: Upgrade
+
+Ho...etc...
+		outBuffer: 	'HinspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point x:...etc...
+		inNextToWrite: 	533
+		outNextToWrite: 	75
+		lastRead: 	532
+		timeout: 	3000
+		autoFlush: 	true
+		bufferSize: 	4096
+		binary: 	false
+		shouldSignal: 	true
+
+
+BlockClosure>>on:do:
+	Receiver: [socket sendData: outBuffer count: outNextToWrite - 1]
+	Arguments and temporary variables: 
+		exception: 	ConnectionTimedOut
+		handlerAction: 	[:ex | shouldSignal
+		ifTrue: []]
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	SocketStream>>flush
+		startpc: 	60
+		numArgs: 	0
+
+
+SocketStream>>flush
+	Receiver: SocketStream[inbuf:4kb/outbuf:4kb]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		recentlyRead: 	42
+		socket: 	a Socket[invalidSocketHandle]
+		inBuffer: 	'GET /broadcast HTTP/1.1
+
+Upgrade: websocket
+
+Connection: Upgrade
+
+Ho...etc...
+		outBuffer: 	'HinspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point x:...etc...
+		inNextToWrite: 	533
+		outNextToWrite: 	75
+		lastRead: 	532
+		timeout: 	3000
+		autoFlush: 	true
+		bufferSize: 	4096
+		binary: 	false
+		shouldSignal: 	true
+
+
+WebSocket07>>send:code:final:mask:
+	Receiver: WebSocket07(127.0.0.1:64880)
+	Arguments and temporary variables: 
+		data: 	'inspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point x: 2 y: 3...etc...
+		opcode: 	1
+		isFinal: 	true
+		doMask: 	false
+		byte1: 	129
+		byte2: 	72
+		mask: 	nil
+		xLength: 	#[]
+		copy: 	'inspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point x: 2 y: 3...etc...
+		i: 	nil
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:64880'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	nil
+		frameData: 	nil
+		closing: 	false
+		masking: 	false
+
+
+WebSocket07>>send:code:final:
+	Receiver: WebSocket07(127.0.0.1:64880)
+	Arguments and temporary variables: 
+		data: 	'inspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point x: 2 y: 3...etc...
+		opcode: 	1
+		isFinal: 	true
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:64880'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	nil
+		frameData: 	nil
+		closing: 	false
+		masking: 	false
+
+
+WebSocket07>>send:code:
+	Receiver: WebSocket07(127.0.0.1:64880)
+	Arguments and temporary variables: 
+		data: 	'inspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point x: 2 y: 3...etc...
+		opcode: 	1
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:64880'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	nil
+		frameData: 	nil
+		closing: 	false
+		masking: 	false
+
+
+WebSocket07>>send:
+	Receiver: WebSocket07(127.0.0.1:64880)
+	Arguments and temporary variables: 
+		aStringOrBytes: 	'inspectIt#''OrderedCollection with: ''0'' with: 1 with: (Point...etc...
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:64880'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	nil
+		frameData: 	nil
+		closing: 	false
+		masking: 	false
+
+
+ToolAmberWorkspace>>inspectIt
+	Receiver: a ToolAmberWorkspace
+	Arguments and temporary variables: 
+		socket: 	WebSocket07(127.0.0.1:64880)
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(328466432) a PluggableTextMorph(10...etc...
+		contents: 	a Text for '''OrderedCollection with: ''0'' with: 1 with: (Point x: 2...etc...
+		bindings: 	nil
+		acceptDroppedMorphs: 	false
+		acceptAction: 	nil
+		mustDeclareVariables: 	false
+		fileName: 	nil
+		lineEnding: 	#crlf
+		encoding: 	'utf-8'
+		stylingActive: 	true
+		client: 	an ObjectAmberClient
+
+
+ToolAmberWorkspace(StringHolder)>>perform:orSendTo:
+	Receiver: a ToolAmberWorkspace
+	Arguments and temporary variables: 
+		selector: 	#inspectIt
+		otherTarget: 	a PluggableTextMorph(1006108672)
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(328466432) a PluggableTextMorph(10...etc...
+		contents: 	a Text for '''OrderedCollection with: ''0'' with: 1 with: (Point x: 2...etc...
+		bindings: 	nil
+		acceptDroppedMorphs: 	false
+		acceptAction: 	nil
+		mustDeclareVariables: 	false
+		fileName: 	nil
+		lineEnding: 	#crlf
+		encoding: 	'utf-8'
+		stylingActive: 	true
+		client: 	an ObjectAmberClient
+
+
+[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector]
+		ifFalse: [selArgCount = arguments size
+				ifTrue: [target perform: selector withArguments: arguments]
+				ifFalse: [target
+						perform: selector
+						withArguments: (arguments copyWith: evt)]].
+	self changed] in ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+	Receiver: a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Arguments and temporary variables: 
+		evt: 	[393@136 mouseUp 64665759 nil]
+		selArgCount: 	2
+	Receiver's instance variables: 
+		bounds: 	358@125 corner: 468@139
+		owner: 	a MenuMorph(673972224)
+		submorphs: 	#()
+		fullBounds: 	358@125 corner: 468@139
+		color: 	Color black
+		extension: 	a MorphExtension (763101184)
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+		emphasis: 	0
+		contents: 	'Inspect it on...'
+		hasFocus: 	false
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a ToolAmberWorkspace
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+		icon: 	Form(16x1x8)
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+		keyText: 	nil
+
+
+BlockClosure>>ensure:
+	Receiver: [| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[oldcursor show]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+		startpc: 	156
+		numArgs: 	0
+
+
+CursorWithMask(Cursor)>>showWhile:
+	Receiver: ((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r10000000000000000000000...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [targe...etc...
+		oldcursor: 	((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r1...etc...
+	Receiver's instance variables: 
+		bits: 	a Bitmap of length 16
+		width: 	16
+		height: 	16
+		depth: 	1
+		offset: 	-1@ -1
+		maskForm: 	Form(16x16x1)
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+	Receiver: a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Arguments and temporary variables: 
+		evt: 	[393@136 mouseUp 64665759 nil]
+		w: 	a PasteUpMorph(425197568) [world]
+	Receiver's instance variables: 
+		bounds: 	358@125 corner: 468@139
+		owner: 	a MenuMorph(673972224)
+		submorphs: 	#()
+		fullBounds: 	358@125 corner: 468@139
+		color: 	Color black
+		extension: 	a MorphExtension (763101184)
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+		emphasis: 	0
+		contents: 	'Inspect it on...'
+		hasFocus: 	false
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a ToolAmberWorkspace
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+		icon: 	Form(16x1x8)
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+		keyText: 	nil
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>mouseUp:
+	Receiver: a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Arguments and temporary variables: 
+		evt: 	[393@136 mouseUp 64665759 nil]
+	Receiver's instance variables: 
+		bounds: 	358@125 corner: 468@139
+		owner: 	a MenuMorph(673972224)
+		submorphs: 	#()
+		fullBounds: 	358@125 corner: 468@139
+		color: 	Color black
+		extension: 	a MorphExtension (763101184)
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+		emphasis: 	0
+		contents: 	'Inspect it on...'
+		hasFocus: 	false
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a ToolAmberWorkspace
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+		icon: 	Form(16x1x8)
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+		keyText: 	nil
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>handleMouseUp:
+	Receiver: a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+	Receiver's instance variables: 
+		bounds: 	358@125 corner: 468@139
+		owner: 	a MenuMorph(673972224)
+		submorphs: 	#()
+		fullBounds: 	358@125 corner: 468@139
+		color: 	Color black
+		extension: 	a MorphExtension (763101184)
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+		emphasis: 	0
+		contents: 	'Inspect it on...'
+		hasFocus: 	false
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a ToolAmberWorkspace
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+		icon: 	Form(16x1x8)
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+		keyText: 	nil
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [393@136 mouseUp 64665759 nil]
+	Arguments and temporary variables: 
+		anObject: 	a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Receiver's instance variables: 
+		timeStamp: 	64665759
+		source: 	a HandMorph(843055104)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	393@136
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+ToggleMenuItemMorph(Morph)>>handleEvent:
+	Receiver: a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+	Receiver's instance variables: 
+		bounds: 	358@125 corner: 468@139
+		owner: 	a MenuMorph(673972224)
+		submorphs: 	#()
+		fullBounds: 	358@125 corner: 468@139
+		color: 	Color black
+		extension: 	a MorphExtension (763101184)
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+		emphasis: 	0
+		contents: 	'Inspect it on...'
+		hasFocus: 	false
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a ToolAmberWorkspace
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+		icon: 	Form(16x1x8)
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+		keyText: 	nil
+
+
+MorphicEventDispatcher>>dispatchDefault:with:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		aMorph: 	a ToggleMenuItemMorph(752877568)'Inspect it on...'
+		localEvt: 	nil
+		index: 	1
+		child: 	nil
+		morphs: 	#()
+		inside: 	true
+	Receiver's instance variables: 
+		lastType: 	#mouseUp
+		lastDispatch: 	#dispatchDefault:with:
+
+
+MorphicEventDispatcher>>dispatchEvent:with:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		aMorph: 	a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Receiver's instance variables: 
+		lastType: 	#mouseUp
+		lastDispatch: 	#dispatchDefault:with:
+
+
+ToggleMenuItemMorph(Morph)>>processEvent:using:
+	Receiver: a ToggleMenuItemMorph(752877568)'Inspect it on...'
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		defaultDispatcher: 	a MorphicEventDispatcher
+	Receiver's instance variables: 
+		bounds: 	358@125 corner: 468@139
+		owner: 	a MenuMorph(673972224)
+		submorphs: 	#()
+		fullBounds: 	358@125 corner: 468@139
+		color: 	Color black
+		extension: 	a MorphExtension (763101184)
+		font: 	a StrikeFont(Bitmap DejaVu Sans 9 14)
+		emphasis: 	0
+		contents: 	'Inspect it on...'
+		hasFocus: 	false
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a ToolAmberWorkspace
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a PluggableTextMorph(1006108672))
+		icon: 	Form(16x1x8)
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+		keyText: 	nil
+
+
+MorphicEventDispatcher>>dispatchDefault:with:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		aMorph: 	a MenuMorph(673972224)
+		localEvt: 	[393@136 mouseUp 64665759 nil]
+		index: 	3
+		child: 	a ToggleMenuItemMorph(752877568)'Inspect it on...'
+		morphs: 	an Array(a ToggleMenuItemMorph(590086144)'Do it on...' a ToggleMenuItem...etc...
+		inside: 	false
+	Receiver's instance variables: 
+		lastType: 	#mouseUp
+		lastDispatch: 	#dispatchDefault:with:
+
+
+MorphicEventDispatcher>>dispatchEvent:with:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		aMorph: 	a MenuMorph(673972224)
+	Receiver's instance variables: 
+		lastType: 	#mouseUp
+		lastDispatch: 	#dispatchDefault:with:
+
+
+MenuMorph(Morph)>>processEvent:using:
+	Receiver: a MenuMorph(673972224)
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		defaultDispatcher: 	a MorphicEventDispatcher
+	Receiver's instance variables: 
+		bounds: 	353@82 corner: 473@260
+		owner: 	nil
+		submorphs: 	an Array(a ToggleMenuItemMorph(590086144)'Do it on...' a ToggleMenuI...etc...
+		fullBounds: 	353@82 corner: 473@260
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+		extension: 	a MorphExtension (688914432) [other:  (basicColor -> (Color r: 0.745...etc...
+		borderWidth: 	2
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+		defaultTarget: 	a ToolAmberWorkspace
+		selectedItem: 	a ToggleMenuItemMorph(752877568)'Inspect it on...'
+		stayUp: 	false
+		popUpOwner: 	nil
+		activeSubMenu: 	nil
+		activatorDockingBar: 	nil
+		embeddable: 	nil
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(590086144)'Do it on...' a...etc...
+
+
+MenuMorph(Morph)>>processEvent:
+	Receiver: a MenuMorph(673972224)
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+	Receiver's instance variables: 
+		bounds: 	353@82 corner: 473@260
+		owner: 	nil
+		submorphs: 	an Array(a ToggleMenuItemMorph(590086144)'Do it on...' a ToggleMenuI...etc...
+		fullBounds: 	353@82 corner: 473@260
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+		extension: 	a MorphExtension (688914432) [other:  (basicColor -> (Color r: 0.745...etc...
+		borderWidth: 	2
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+		defaultTarget: 	a ToolAmberWorkspace
+		selectedItem: 	a ToggleMenuItemMorph(752877568)'Inspect it on...'
+		stayUp: 	false
+		popUpOwner: 	nil
+		activeSubMenu: 	nil
+		activatorDockingBar: 	nil
+		embeddable: 	nil
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(590086144)'Do it on...' a...etc...
+
+
+MenuMorph>>handleFocusEvent:
+	Receiver: a MenuMorph(673972224)
+	Arguments and temporary variables: 
+		evt: 	[393@136 mouseUp 64665759 nil]
+	Receiver's instance variables: 
+		bounds: 	353@82 corner: 473@260
+		owner: 	nil
+		submorphs: 	an Array(a ToggleMenuItemMorph(590086144)'Do it on...' a ToggleMenuI...etc...
+		fullBounds: 	353@82 corner: 473@260
+		color: 	(Color r: 0.848 g: 0.848 b: 0.848)
+		extension: 	a MorphExtension (688914432) [other:  (basicColor -> (Color r: 0.745...etc...
+		borderWidth: 	2
+		borderColor: 	(Color r: 0.595 g: 0.595 b: 0.595)
+		defaultTarget: 	a ToolAmberWorkspace
+		selectedItem: 	a ToggleMenuItemMorph(752877568)'Inspect it on...'
+		stayUp: 	false
+		popUpOwner: 	nil
+		activeSubMenu: 	nil
+		activatorDockingBar: 	nil
+		embeddable: 	nil
+		menuItems: 	an OrderedCollection(a ToggleMenuItemMorph(590086144)'Do it on...' a...etc...
+
+
+[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+				handleFocusEvent: (anEvent
+						transformedBy: (focusHolder transformedFrom: self))] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(843055104)
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		focusHolder: 	a MenuMorph(673972224)
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	393@136 corner: 409@152
+		owner: 	a PasteUpMorph(425197568) [world]
+		submorphs: 	#()
+		fullBounds: 	393@136 corner: 409@152
+		color: 	Color blue
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(591921152)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[393@136 mouseUp 64665759 nil]
+		targetOffset: 	35@11
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 64665759 393 136 0 0 1 1)
+		lastKeyScanCode: 	83
+		combinedChar: 	nil
+
+
+[aBlock value] in PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(425197568) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+		...etc...
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1280@689
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a PreDebugWindow(282066944) a Sys...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (666632192) [eventHandler = an EventHandler]  [othe...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [aBlock value]
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[:ex | 
+ActiveWorld := priorWorld.
+	ActiveEvent := priorEvent.
+	...etc...
+		handlerActive: 	false
+	Receiver's instance variables: 
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+		startpc: 	67
+		numArgs: 	0
+
+
+PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(425197568) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+		...etc...
+		priorWorld: 	a PasteUpMorph(425197568) [world]
+		priorHand: 	a HandMorph(843055104)
+		priorEvent: 	[393@136 mouseOver red nil nil]
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1280@689
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a PreDebugWindow(282066944) a Sys...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (666632192) [eventHandler = an EventHandler]  [othe...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(843055104)
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		focusHolder: 	a MenuMorph(673972224)
+		aBlock: 	[self mouseFocus: nil]
+		w: 	a PasteUpMorph(425197568) [world]
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	393@136 corner: 409@152
+		owner: 	a PasteUpMorph(425197568) [world]
+		submorphs: 	#()
+		fullBounds: 	393@136 corner: 409@152
+		color: 	Color blue
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(591921152)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[393@136 mouseUp 64665759 nil]
+		targetOffset: 	35@11
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 64665759 393 136 0 0 1 1)
+		lastKeyScanCode: 	83
+		combinedChar: 	nil
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(843055104)
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+		focusHolder: 	a MenuMorph(673972224)
+		aBlock: 	[self mouseFocus: nil]
+		result: 	nil
+	Receiver's instance variables: 
+		bounds: 	393@136 corner: 409@152
+		owner: 	a PasteUpMorph(425197568) [world]
+		submorphs: 	#()
+		fullBounds: 	393@136 corner: 409@152
+		color: 	Color blue
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(591921152)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[393@136 mouseUp 64665759 nil]
+		targetOffset: 	35@11
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 64665759 393 136 0 0 1 1)
+		lastKeyScanCode: 	83
+		combinedChar: 	nil
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(843055104)
+	Arguments and temporary variables: 
+		anEvent: 	[393@136 mouseUp 64665759 nil]
+	Receiver's instance variables: 
+		bounds: 	393@136 corner: 409@152
+		owner: 	a PasteUpMorph(425197568) [world]
+		submorphs: 	#()
+		fullBounds: 	393@136 corner: 409@152
+		color: 	Color blue
+		extension: 	a MorphExtension (141295616) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(591921152)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[393@136 mouseUp 64665759 nil]
+		targetOffset: 	35@11
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 64665759 393 136 0 0 1 1)
+		lastKeyScanCode: 	83
+		combinedChar: 	nil
+
+
+
+--- The full stack ---
+Socket(Object)>>primitiveFailed:
+Socket(Object)>>primitiveFailed
+Socket>>primSocketSendDone:
+Socket>>waitForSendDoneFor:
+Socket>>sendSomeData:startIndex:count:for:
+Socket>>sendSomeData:startIndex:count:
+Socket>>sendData:count:
+[socket sendData: outBuffer count: outNextToWrite - 1] in SocketStream>>flush
+BlockClosure>>on:do:
+SocketStream>>flush
+WebSocket07>>send:code:final:mask:
+WebSocket07>>send:code:final:
+WebSocket07>>send:code:
+WebSocket07>>send:
+ToolAmberWorkspace>>inspectIt
+ToolAmberWorkspace(StringHolder)>>perform:orSendTo:
+[| selArgCount |
+(selArgCount := selector numArgs) = 0
+		ifTrue: [target perform: selector]
+		ifFalse: [selArgCount = arguments size
+				ifTrue: [target perform: selector withArguments: arguments]
+				ifFalse: [target
+						perform: selector
+						withArguments: (arguments copyWith: evt)]].
+	self changed] in ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+BlockClosure>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+ToggleMenuItemMorph(MenuItemMorph)>>mouseUp:
+ToggleMenuItemMorph(MenuItemMorph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+ToggleMenuItemMorph(Morph)>>handleEvent:
+MorphicEventDispatcher>>dispatchDefault:with:
+MorphicEventDispatcher>>dispatchEvent:with:
+ToggleMenuItemMorph(Morph)>>processEvent:using:
+MorphicEventDispatcher>>dispatchDefault:with:
+MorphicEventDispatcher>>dispatchEvent:with:
+MenuMorph(Morph)>>processEvent:using:
+MenuMorph(Morph)>>processEvent:
+MenuMorph>>handleFocusEvent:
+[ActiveHand := self.
+	ActiveEvent := anEvent.
+	result := focusHolder
+				handleFocusEvent: (anEvent
+						transformedBy: (focusHolder transformedFrom: self))] in HandMorph>>sendFocusEvent:to:clear:
+[aBlock value] in PasteUpMorph>>becomeActiveDuring:
+BlockClosure>>on:do:
+PasteUpMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil] in WorldState>>doOneCycleNowFor:
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldState>>doOneSubCycleFor:
+PasteUpMorph>>doOneSubCycle
+MenuMorph>>invokeModalAt:in:allowKeyboard:
+MenuMorph>>invokeModal:
+MenuMorph>>invokeModal
+PluggableTextMorph>>yellowButtonActivity:
+PluggableTextMorph(ScrollPane)>>mouseDown:
+PluggableTextMorph(Morph)>>handleMouseDown:
+MouseButtonEvent>>sentTo:
+PluggableTextMorph(Morph)>>handleEvent:
+MorphicEventDispatcher>>dispatchMouseDown:with:
+MorphicEventDispatcher>>dispatchEvent:with:
+PluggableTextMorph(Morph)>>processEvent:using:
+MorphicEventDispatcher>>dispatchMouseDown:with:
+MorphicEventDispatcher>>dispatchEvent:with:
+SystemWindow(Morph)>>processEvent:using:
+MorphicEventDispatcher>>dispatchMouseDown:with:
+MorphicEventDispatcher>>dispatchEvent:with:
+PasteUpMorph(Morph)>>processEvent:using:
+PasteUpMorph>>processEvent:using:
+PasteUpMorph(Morph)>>processEvent:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[:h | 
+ActiveHand := h.
+	h processEvents.
+	ActiveHand := nil] in WorldState>>doOneCycleNowFor:
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+PasteUpMorph>>doOneCycle
+[[World doOneCycle.
+	Processor yield.
+	false] whileFalse.
+	nil] in Project class>>spawnNewProcess
+[self value.
+	Processor terminateActive] in BlockClosure>>newProcess
+------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+AmberException: Parse error on line 1 column 37 : Unexpected character 0
+24 September 2013 1:42:05 pm
+
+VM: Win32 - IX86 - 6.2 - Croquet Closure Cog VM [CoInterpreter VMMaker-oscog-EstebanLorenzano.161]
+Image: Pharo1.3 [Latest update: #13315]
+
+AmberRemoteDevelopingServer class>>messageHandler:from:
+	Receiver: AmberRemoteDevelopingServer
+	Arguments and temporary variables: 
+		aMessage: 	'error#Parse error on line 1 column 37 : Unexpected character 0'
+		aWs: 	WebSocket07(127.0.0.1:56233)
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary()
+		format: 	2
+		instanceVariables: 	nil
+		organization: 	('as yet unclassified')
+
+		subclasses: 	nil
+		name: 	#AmberRemoteDevelopingServer
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'WebToolsAmber-GSoC2013'
+		traitComposition: 	nil
+		localSelectors: 	nil
+		_mutex: 	a Mutex
+		_clients: 	an OrderedCollection(an ObjectAmberClient)
+		_sockets: 	an OrderedCollection(WebSocket07(127.0.0.1:56233))
+		workspace: 	a ToolAmberWorkspace
+
+
+[:data | self messageHandler: data from: ws] in [:req | 
+| ws |
+ws := req asWebSocket.
+	ws timeout: 3000.
+	Transcript cr; show: 'New ' , ws printString.
+	ws
+		onMessage: [:data | self messageHandler: data from: ws].
+	ws
+		onClose: [self disconnectHandler: ws].
+	ws
+		onError: [:ex | self errorHandler: ex from: ws].
+	self connectHandler: ws.
+	ws run] in AmberRemoteDevelopingServer class>>startServerOn:
+	Receiver: AmberRemoteDevelopingServer
+	Arguments and temporary variables: 
+		ws: 	'error#Parse error on line 1 column 37 : Unexpected character 0'
+		data: 	WebSocket07(127.0.0.1:56233)
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary()
+		format: 	2
+		instanceVariables: 	nil
+		organization: 	('as yet unclassified')
+
+		subclasses: 	nil
+		name: 	#AmberRemoteDevelopingServer
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'WebToolsAmber-GSoC2013'
+		traitComposition: 	nil
+		localSelectors: 	nil
+		_mutex: 	a Mutex
+		_clients: 	an OrderedCollection(an ObjectAmberClient)
+		_sockets: 	an OrderedCollection(WebSocket07(127.0.0.1:56233))
+		workspace: 	a ToolAmberWorkspace
+
+
+BlockClosure>>valueWithPossibleArgs:
+	Receiver: [:data | self messageHandler: data from: ws]
+	Arguments and temporary variables: 
+		anArray: 	an Array('error#Parse error on line 1 column 37 : Unexpected character...etc...
+	Receiver's instance variables: 
+		outerContext: 	[:req | 
+| ws |
+ws := req asWebSocket.
+	ws timeout: 3000.
+	Transc...etc...
+		startpc: 	163
+		numArgs: 	1
+
+
+WebSocket07(WebSocket)>>handle:arguments:ifAbsent:
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+		selector: 	'message'
+		argList: 	an Array('error#Parse error on line 1 column 37 : Unexpected character...etc...
+		aBlock: 	[]
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+WebSocket07(WebSocket)>>handle:arguments:
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+		selector: 	'message'
+		argList: 	an Array('error#Parse error on line 1 column 37 : Unexpected character...etc...
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+WebSocket07(WebSocket)>>handleMessage:type:
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+		msgData: 	'error#Parse error on line 1 column 37 : Unexpected character 0'
+		msgType: 	1
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+WebSocket07>>readFrameFrom:
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+		aStream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		byte: 	190
+		length: 	62
+		final: 	true
+		mask: 	'Û'
+		opcode: 	1
+		payload: 	'error#Parse error on line 1 column 37 : Unexpected character 0'
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+WebSocket07>>readFrame
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil] in [[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil]
+		on: Error
+		do: [:ex | self handleError: ex]] in WebSocket07>>run
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+BlockClosure>>on:do:
+	Receiver: [[stream isConnected]
+		whileTrue: [self readFrame].
+	nil]
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[:ex | self handleError: ex]
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	[[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil]
+		on:...etc...
+		startpc: 	61
+		numArgs: 	0
+
+
+[[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil]
+		on: Error
+		do: [:ex | self handleError: ex]] in WebSocket07>>run
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+BlockClosure>>ensure:
+	Receiver: [[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil]
+		on: Error
+		do: [:ex | self ...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[[stream socket destroy]
+		on: Error
+		do: [:ex | nil].
+	self handleClo...etc...
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	WebSocket07>>run
+		startpc: 	57
+		numArgs: 	0
+
+
+WebSocket07>>run
+	Receiver: WebSocket07(127.0.0.1:56233)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		name: 	'127.0.0.1:56233'
+		process: 	nil
+		stream: 	SocketStream[inbuf:4kb/outbuf:4kb]
+		handlers: 	a Dictionary('close'->[self disconnectHandler: ws] 'error'->[:ex | se...etc...
+		frameType: 	1
+		frameData: 	#(#[101 114 114 111 114 35 80 97 114 115 101 32 101 114 114 111 114 ...etc...
+		closing: 	false
+		masking: 	false
+
+
+[:req | 
+| ws |
+ws := req asWebSocket.
+	ws timeout: 3000.
+	Transcript cr; show: 'New ' , ws printString.
+	ws
+		onMessage: [:data | self messageHandler: data from: ws].
+	ws
+		onClose: [self disconnectHandler: ws].
+	ws
+		onError: [:ex | self errorHandler: ex from: ws].
+	self connectHandler: ws.
+	ws run] in AmberRemoteDevelopingServer class>>startServerOn:
+	Receiver: AmberRemoteDevelopingServer
+	Arguments and temporary variables: 
+		req: 	WebRequest(GET /broadcast HTTP/1.1
+
+upgrade: websocket
+
+connection: Upgrad...etc...
+		ws: 	WebSocket07(127.0.0.1:56233)
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary()
+		format: 	2
+		instanceVariables: 	nil
+		organization: 	('as yet unclassified')
+
+		subclasses: 	nil
+		name: 	#AmberRemoteDevelopingServer
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'WebToolsAmber-GSoC2013'
+		traitComposition: 	nil
+		localSelectors: 	nil
+		_mutex: 	a Mutex
+		_clients: 	an OrderedCollection(an ObjectAmberClient)
+		_sockets: 	an OrderedCollection(WebSocket07(127.0.0.1:56233))
+		workspace: 	a ToolAmberWorkspace
+
+
+WebServer>>invokeAction:request:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+		action: 	[:req | 
+| ws |
+ws := req asWebSocket.
+	ws timeout: 3000.
+	Transcript c...etc...
+		request: 	WebRequest(GET /broadcast HTTP/1.1
+
+upgrade: websocket
+
+connection: Up...etc...
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+[self
+		invokeAction: (action at: 2)
+		request: request] in WebServer>>dispatchRequest:url:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+<<error during printing>
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [self
+		invokeAction: (action at: 2)
+		request: request]
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[:ex | errorHandler
+		ifNil: [self handleError: ex request: requ...etc...
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	WebServer>>dispatchRequest:url:
+		startpc: 	333
+		numArgs: 	0
+
+
+WebServer>>dispatchRequest:url:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+<<error during printing>
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+WebServer>>dispatchRequest:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+		request: 	WebRequest(GET /broadcast HTTP/1.1
+
+upgrade: websocket
+
+connection: Up...etc...
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+[| ssl |
+certName
+		ifNil: [stream := SocketStream on: aSocket]
+		ifNotNil: [ssl := Smalltalk
+						at: #SqueakSSL
+						ifAbsent: [self error: 'SqueakSSL not installed'].
+			stream := ssl secureSocketStream on: aSocket.
+			[stream sslAccept: certName]
+				on: Error
+				do: [^ stream destroy]].
+	[aSocket isConnected]
+		whileTrue: [stream peek
+				ifNil: [^ aSocket destroy].
+			request := self newRequest.
+			[request readFrom: stream]
+				on: Error
+				do: [:ex | 
+					(ex isKindOf: NetworkError)
+						ifFalse: [[request send400Response]
+								on: Error
+								do: [:ignore | nil]].
+					^ aSocket destroy].
+			self dispatchRequest: request].
+	nil] in WebServer>>handleConnectionFrom:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+<<error during printing>
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [| ssl |
+certName
+		ifNil: [stream := SocketStream on: aSocket]
+		ifNotNil: [ssl := Smallt...etc...
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[:ex | (ex isKindOf: NetworkError)
+		ifFalse: [self log: 'Error ...etc...
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	WebServer>>handleConnectionFrom:
+		startpc: 	250
+		numArgs: 	0
+
+
+WebServer>>handleConnectionFrom:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+<<error during printing>
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+[self handleConnectionFrom: aSocket] in [[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]] in [[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]]
+		ensure: [aSocket destroy]] in WebServer>>asyncHandleConnectionFrom:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+		aSocket: 	a Socket[connected]
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [self handleConnectionFrom: aSocket]
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[:ex | aSocket destroy]
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aS...etc...
+		startpc: 	76
+		numArgs: 	0
+
+
+[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]] in [[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]]
+		ensure: [aSocket destroy]] in WebServer>>asyncHandleConnectionFrom:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+		aSocket: 	a Socket[connected]
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+BlockClosure>>ensure:
+	Receiver: [[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[aSocket destroy]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	[[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | a...etc...
+		startpc: 	71
+		numArgs: 	0
+
+
+[[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]]
+		ensure: [aSocket destroy]] in WebServer>>asyncHandleConnectionFrom:
+	Receiver: a WebServer
+	Arguments and temporary variables: 
+		aSocket: 	a Socket[connected]
+	Receiver's instance variables: 
+		listenerSocket: 	a Socket[waitingForConnection]
+		listenerProcess: 	a Process in [self schedule.
+	beingWaitedOn
+		ifTrue: [delaySe...etc...
+		interface: 	nil
+		port: 	9090
+		mutex: 	a Mutex
+		connections: 	an IdentitySet(a Process in MorphicUIManager>>openDebuggerOn:conte...etc...
+		entryPoints: 	a Dictionary('/broadcast'->an Array(#('GET' 'POST') [:req | 
+| ws ...etc...
+		vault: 	a Dictionary()
+		logAction: 	[:aString | Transcript cr; show: aString]
+		nonceCache: 	a Dictionary()
+		sessions: 	a Dictionary()
+		serverString: 	nil
+		errorHandler: 	nil
+		accessLog: 	nil
+		certName: 	nil
+		siteUrl: 	nil
+
+
+[self value.
+	Processor terminateActive] in BlockClosure>>newProcess
+	Receiver: [[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+	...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	WebServer>>asyncHandleConnectionFrom:
+		startpc: 	66
+		numArgs: 	0
+
+
+
+--- The full stack ---
+AmberRemoteDevelopingServer class>>messageHandler:from:
+[:data | self messageHandler: data from: ws] in [:req | 
+| ws |
+ws := req asWebSocket.
+	ws timeout: 3000.
+	Transcript cr; show: 'New ' , ws printString.
+	ws
+		onMessage: [:data | self messageHandler: data from: ws].
+	ws
+		onClose: [self disconnectHandler: ws].
+	ws
+		onError: [:ex | self errorHandler: ex from: ws].
+	self connectHandler: ws.
+	ws run] in AmberRemoteDevelopingServer class>>startServerOn:
+BlockClosure>>valueWithPossibleArgs:
+WebSocket07(WebSocket)>>handle:arguments:ifAbsent:
+WebSocket07(WebSocket)>>handle:arguments:
+WebSocket07(WebSocket)>>handleMessage:type:
+WebSocket07>>readFrameFrom:
+WebSocket07>>readFrame
+[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil] in [[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil]
+		on: Error
+		do: [:ex | self handleError: ex]] in WebSocket07>>run
+BlockClosure>>on:do:
+[[[stream isConnected]
+		whileTrue: [self readFrame].
+	nil]
+		on: Error
+		do: [:ex | self handleError: ex]] in WebSocket07>>run
+BlockClosure>>ensure:
+WebSocket07>>run
+[:req | 
+| ws |
+ws := req asWebSocket.
+	ws timeout: 3000.
+	Transcript cr; show: 'New ' , ws printString.
+	ws
+		onMessage: [:data | self messageHandler: data from: ws].
+	ws
+		onClose: [self disconnectHandler: ws].
+	ws
+		onError: [:ex | self errorHandler: ex from: ws].
+	self connectHandler: ws.
+	ws run] in AmberRemoteDevelopingServer class>>startServerOn:
+WebServer>>invokeAction:request:
+[self
+		invokeAction: (action at: 2)
+		request: request] in WebServer>>dispatchRequest:url:
+BlockClosure>>on:do:
+WebServer>>dispatchRequest:url:
+WebServer>>dispatchRequest:
+[| ssl |
+certName
+		ifNil: [stream := SocketStream on: aSocket]
+		ifNotNil: [ssl := Smalltalk
+						at: #SqueakSSL
+						ifAbsent: [self error: 'SqueakSSL not installed'].
+			stream := ssl secureSocketStream on: aSocket.
+			[stream sslAccept: certName]
+				on: Error
+				do: [^ stream destroy]].
+	[aSocket isConnected]
+		whileTrue: [stream peek
+				ifNil: [^ aSocket destroy].
+			request := self newRequest.
+			[request readFrom: stream]
+				on: Error
+				do: [:ex | 
+					(ex isKindOf: NetworkError)
+						ifFalse: [[request send400Response]
+								on: Error
+								do: [:ignore | nil]].
+					^ aSocket destroy].
+			self dispatchRequest: request].
+	nil] in WebServer>>handleConnectionFrom:
+BlockClosure>>on:do:
+WebServer>>handleConnectionFrom:
+[self handleConnectionFrom: aSocket] in [[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]] in [[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]]
+		ensure: [aSocket destroy]] in WebServer>>asyncHandleConnectionFrom:
+BlockClosure>>on:do:
+[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]] in [[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]]
+		ensure: [aSocket destroy]] in WebServer>>asyncHandleConnectionFrom:
+BlockClosure>>ensure:
+[[[self handleConnectionFrom: aSocket]
+		on: Error
+		do: [:ex | aSocket destroy].
+	mutex
+		critical: [connections
+				remove: Processor activeProcess
+				ifAbsent: []]]
+		ensure: [aSocket destroy]] in WebServer>>asyncHandleConnectionFrom:
+[self value.
+	Processor terminateActive] in BlockClosure>>newProcess
+------------------------------------------------------------
+
