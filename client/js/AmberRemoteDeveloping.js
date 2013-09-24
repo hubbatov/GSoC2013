@@ -254,17 +254,13 @@ category: 'accessors',
 fn: function (anObject){
 var self=this;
 var hash;
-return smalltalk.withContext(function($ctx1) { var $1,$2;
-hash=_st(_st(anObject)._identityHash())._asString();
-$1=(smalltalk.Transcript || Transcript);
-_st($1)._show_(hash);
-$2=_st($1)._cr();
+return smalltalk.withContext(function($ctx1) { hash=_st(_st(anObject)._identityHash())._asString();
 _st(self)._at_put_(hash,anObject);
 return self}, function($ctx1) {$ctx1.fill(self,"appendObject:",{anObject:anObject,hash:hash},smalltalk.AmberSessionObjects)})},
 args: ["anObject"],
-source: "appendObject: anObject\x0a\x09\x22Adding object = anObject to dictionary\x22\x0a\x09| hash |\x0a\x09hash := anObject identityHash asString.\x0a\x09Transcript show: hash; cr.\x0a\x09self at: hash put: anObject.",
-messageSends: ["asString", "identityHash", "show:", "cr", "at:put:"],
-referencedClasses: ["Transcript"]
+source: "appendObject: anObject\x0a\x09\x22Adding object = anObject to dictionary\x22\x0a\x09| hash |\x0a\x09hash := anObject identityHash asString.\x0a\x09self at: hash put: anObject.",
+messageSends: ["asString", "identityHash", "at:put:"],
+referencedClasses: []
 }),
 smalltalk.AmberSessionObjects);
 

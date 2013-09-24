@@ -122,7 +122,6 @@ appendObject: anObject
 	"Adding object = anObject to dictionary"
 	| hash |
 	hash := anObject identityHash asString.
-	Transcript show: hash; cr.
 	self at: hash put: anObject.
 !
 

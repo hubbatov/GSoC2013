@@ -195,14 +195,10 @@ selector: "appendObject:",
 fn: function (anObject){
 var self=this;
 var hash;
-return smalltalk.withContext(function($ctx1) { var $1,$2;
-hash=_st(_st(anObject)._identityHash())._asString();
-$1=(smalltalk.Transcript || Transcript);
-_st($1)._show_(hash);
-$2=_st($1)._cr();
+return smalltalk.withContext(function($ctx1) { hash=_st(_st(anObject)._identityHash())._asString();
 _st(self)._at_put_(hash,anObject);
 return self}, function($ctx1) {$ctx1.fill(self,"appendObject:",{anObject:anObject,hash:hash},smalltalk.AmberSessionObjects)})},
-messageSends: ["asString", "identityHash", "show:", "cr", "at:put:"]}),
+messageSends: ["asString", "identityHash", "at:put:"]}),
 smalltalk.AmberSessionObjects);
 
 smalltalk.addMethod(
