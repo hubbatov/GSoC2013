@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-   <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-   <script src="../../../js/amber.js" type="text/javascript"></script>
-   <script type="text/javascript"> 
-      loadAmber({ 
-        files: ['AmberRemoteDeveloping.js', 'Kernel-Collections.js'], 
-        prefix: 'projects/GSoC2013/client/js', 
-        ready: function() {
-                  smalltalk.AmberRemoteDevelopingClient._new()._createDefaultConnection();
-      			}
-     		});
-    </script>
-  </head>
-  <body>
-   <div id="header">
-    Amber remote developing project client page
-    <input id="browserButton" type="button" value= "Open Amber browser" onclick=smalltalk.Browser._open()></button>
-   </div>
-   <div id="messages">
-    <textarea id="messagesField" readonly="readonly" wrap="soft"></textarea>
-   </div>
-  </body>
-</html>
+    <html>
+      <head>
+        <title>Remote developing with Amber</title>
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+        <script src="vendor/amber/support/amber.js"></script>
+        <script src="vendor/amber/support/requirejs/require.min.js"></script>
+        <script type="text/javascript">
+          require.config({ paths: {
+            'com_gsoc2013_amber': 'js', 
+            'com_gsoc2013_amber/_source': 'st'
+          }});
+          require(['amber/devel', 'com_gsoc2013_amber/AmberRemoteDeveloping'], function (smalltalk) {
+            smalltalk.initialize({
+              "transport.defaultAmdNamespace": "com_gsoc2013_amber"
+            });
+            $(function() {
+              smalltalk.AmberRemoteDevelopingClient._new()._createDefaultConnection();
+            });
+          });
+        </script>
+      </head>
+      <body>
+        <div id="header">
+          Amber remote developing project client page
+          <input id="browserButton" type="button" value= "Open Amber browser" onclick="require('amber_vm/smalltalk').Browser._open()"></button>
+        </div>
+        <div id="messages">
+          <textarea id="messagesField" readonly="readonly" wrap="soft"></textarea>
+        </div>
+      </body>
+    </html>

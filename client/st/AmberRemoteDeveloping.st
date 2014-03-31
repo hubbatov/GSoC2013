@@ -1,4 +1,4 @@
-Smalltalk current createPackage: 'AmberRemoteDeveloping'!
+Smalltalk createPackage: 'AmberRemoteDeveloping'!
 Object subclass: #AmberRemoteConnector
 	instanceVariableNames: 'socket'
 	package: 'AmberRemoteDeveloping'!
