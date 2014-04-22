@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Remote developing with Amber</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Khubbatov Rustem" />
+    <script type='text/javascript' src='bower_components/amber/support/requirejs/require.min.js'></script>
+    <script type='text/javascript' src='bower_components/amber/support/amber.js'></script>
+  </head>
+
+  <body>
+    <script type='text/javascript'>
+      require.config({ paths: {
+          'hubbatov': 'src'
+      }});
+      require([
+          'amber/devel',
+          'hubbatov/AmberRemoteDeveloping'
+      ], function (smalltalk) {
+          smalltalk.initialize({
+            'transport.defaultAmdNamespace': "hubbatov"
+          });
+        $(function() {
+          smalltalk.AmberRemoteDevelopingClient._new()._createDefaultConnection();
+          });
+      });
+    </script>
+    <button onclick="require('amber/helpers').globals.Browser._open()">legacy IDE</button>
+    <button onclick="require('amber/helpers').popupHelios()">Helios IDE</button>
+    <div id="header">
+      Amber remote developing project client page
+      <input id="browserButton" type="button" value= "Open Amber browser" onclick="require('amber_vm/smalltalk').Browser._open()"></button>
+    </div>
+    <div id="messages">
+      <textarea id="messagesField" readonly="readonly" wrap="soft"></textarea>
+    </div>
+  </body>
+
+</html>

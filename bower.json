@@ -1,0 +1,23 @@
+{
+    "name": "AmberTools",
+    "description": "Tools for remote developing in Amber using Pharo IDE",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Khubbatov Rustem",
+            "email": "hubbatov@mail.ru"
+        }
+    ],
+    "homepage": "https://github.com/hubbatov/GSoC2013",
+    "keywords": [
+        "Amber",
+        "Smalltalk"
+    ],
+    "license": [
+        "MIT"
+    ],
+    "private": false,
+    "dependencies": {
+        "amber": "~>= 0.12.4"
+    }
+}
